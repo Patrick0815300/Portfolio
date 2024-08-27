@@ -1,11 +1,19 @@
+@import '../../../styles.scss';
+
 a {
     color: #FFFFFF;
 }
 
 section {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
     padding: 37px 100px;
+    background-color: $background-color;
+    z-index: 1000;
 
     div {
         display: flex;

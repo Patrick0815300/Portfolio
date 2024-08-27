@@ -1,0 +1,67 @@
+@import '../../styles.scss';
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    h1 {
+        font-size: 90px;
+        font-weight: 900;
+        line-height: 108px;
+    }
+
+    span {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+}
+
+.about-me-container {
+    margin-right: 100px;
+    margin-left: 100px;
+    width: 500px;
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    img {
+        width: 48px;
+        margin-right: 16px;
+    }
+}
+
+.photo-container {
+    display: flex;
+    align-items: center;
+
+    img {
+        border-radius: 50%;
+        border: 4px solid $primary1-color;
+    }
+
+    .line {
+        width: 267px;
+        border: 2px solid $primary1-color;
+    }
+}
+
+.margin-top {
+    margin-top: 32px;
+}
+
+.shadow {
+    position: absolute;
+    right: -350px;
+    top: 15%;
+    z-index: -1;
+}

@@ -47,15 +47,15 @@ section {
         transform-origin: top;
         white-space: nowrap;
         cursor: pointer;
-    }
 
-    button:hover {
-        background-color: $primary2-color;
-        padding: 20px 40px;
-        margin-top: -5px;
-        margin-bottom: -5px;
-        margin-left: -10px;
-        margin-right: -10px;
+        &:hover {
+            background-color: $primary2-color;
+            padding: 20px 40px;
+            margin-top: -5px;
+            margin-bottom: -5px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
     }
 }
 
@@ -115,7 +115,7 @@ section {
     align-items: center;
     justify-content: space-between;
     margin-top: 90px;
-    margin-bottom: 90px;
+    margin-bottom: 124px;
 
     .media {
         display: flex;

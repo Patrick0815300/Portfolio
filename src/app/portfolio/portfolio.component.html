@@ -1,1 +1,24 @@
-<p>portfolio works!</p>
+<section>
+    <div class="headline">
+        <div class="short-line"></div>
+        <h1>Portfolio</h1>
+        <div class="long-line"></div>
+    </div>
+    <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+
+    <div *ngFor="let project of projects; let i = index" class="projects">
+        <app-portfolio-project 
+            [imageSrc]="project.imageSrc"
+            [altText]="project.altText"
+            [projectName]="project.projectName"
+            [languages]="project.languages"
+            [description]="project.description"
+            [liveTestLink]="project.liveTestLink"
+            [githubLink]="project.githubLink"
+            [reverse]="i % 2 !== 0"> 
+        </app-portfolio-project>
+    </div>
+</section>
+
+
+

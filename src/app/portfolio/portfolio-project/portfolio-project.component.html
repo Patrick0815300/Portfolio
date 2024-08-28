@@ -1,0 +1,17 @@
+<div class="project-container" [ngClass]="{'reverse': reverse}">
+    <div *ngIf="!reverse" class="image">
+        <img [src]="imageSrc" [alt]="altText">
+    </div>
+    <div class="description">
+        <span class="project">{{ projectName }}</span>
+        <span class="languages">{{ languages }}</span>
+        <span>{{ description }}</span>
+        <div class="buttons">
+            <a [href]="liveTestLink"><button>Live test</button></a>
+            <a class="btn-git" [href]="githubLink"><button>Github</button></a>
+        </div>
+    </div>
+    <div *ngIf="reverse" class="image">
+        <img [src]="imageSrc" [alt]="altText">
+    </div>
+</div>

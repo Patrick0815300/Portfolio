@@ -15,11 +15,13 @@ section {
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    div {
+    .icon-item {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         width: 88px;
+        position: relative;
 
         img {
             height: 60px;
@@ -38,6 +40,44 @@ section {
             line-height: 19.2px;
             text-align: center;
         }
+
+        .speechbubble {
+            position: absolute;
+            bottom: 50px;
+            left: -9px;
+            width: 200px;
+            height: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 125ms ease-in-out, visibility 125ms ease-in-out;
+        }
+
+        .learning-icon path {
+            fill: $primary2-color;
+            transition: fill 125ms ease-in-out;
+        }
+    }
+
+    .learning {
+        span {
+            color: $primary2-color;
+            margin-top: 10px;
+            transition: color 125ms ease-in-out;
+        }
+
+        &:hover .learning-icon path {
+            fill: white;
+        }
+
+        &:hover span {
+            color: white;
+        }
+
+        &:hover .speechbubble {
+            opacity: 1;
+            visibility: visible;
+        }
+
     }
 }
 

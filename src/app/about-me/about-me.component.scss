@@ -4,7 +4,7 @@ section {
     position: relative;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    //overflow: hidden;
 
     h1 {
         font-size: 90px;
@@ -60,8 +60,15 @@ section {
 }
 
 .shadow {
+    border: none !important;
+}
+
+.overflow-wrapper {
     position: absolute;
-    right: -350px;
-    top: 15%;
+    bottom: 120px;
+    right: 0;
     z-index: -1;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 300px;
 }

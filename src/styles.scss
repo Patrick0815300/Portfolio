@@ -8,16 +8,37 @@ $version2-secondary-color: #1CDAE6;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+    overflow: visible;
+}
+
 body {
     background-color: $background-color;
     font-size: 23px;
     font-weight: 400;
     line-height: 27.6px;
     color: white;
+    overflow: visible;
 }
 
 a {
     text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $background-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(120deg, $primary2-color, $primary1-color);
+    border-radius: 6px;
 }
 
 /* poppins-100 - latin */
@@ -220,4 +241,14 @@ a {
 
 .fontPoppins {
     font-family: 'Poppins';
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }

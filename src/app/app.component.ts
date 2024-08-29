@@ -7,11 +7,12 @@ import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactformComponent } from './contactform/contactform.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, AboveTheFoldComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, AboveTheFoldComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactformComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

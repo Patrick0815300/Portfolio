@@ -1,32 +1,48 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
-import { JsonPipe } from '@angular/common';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule, JsonPipe } from '@angular/common';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClient } from '@angular/common/http';
-import {
-  MatDialog,
-  MatDialogRef,
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogTitle,
-  MatDialogContent,
-} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, MatButtonModule],
+  imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, MatButtonModule, CommonModule],
   templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss'
+  styleUrl: './contactform.component.scss',
+  animations: [
+    trigger('dialogAnimation', [
+      // "hidden" State
+      state('hidden', style({
+        transform: 'translateY(100%)',
+        opacity: 0,
+        display: 'none'
+      })),
+      // "visible" State
+      state('visible', style({
+        transform: 'translateY(0)',
+        opacity: 1,
+        display: 'flex'
+      })),
+      transition('hidden => visible', [
+        style({ display: 'flex' }),
+        animate('0.5s ease-out')
+      ]),
+      transition('visible => hidden', [
+        animate('0.5s ease-in')
+      ])
+    ])
+  ]
 })
 export class ContactformComponent {
   constructor(public dialog: MatDialog) { }
 
   http = inject(HttpClient)
-
   formComplete: boolean = false;
+  isDialogVisible = false;
 
   contactData = {
     name: "",
@@ -37,8 +53,13 @@ export class ContactformComponent {
 
   isFormComplete(): boolean {
     const { name, email, message, isChecked } = this.contactData;
-    const isValid = name.trim().length > 1 && email.trim().length > 4 && message.trim().length > 3 && isChecked;
+    const isNameValid = typeof name === 'string' && name.trim().length > 1;
+    const isEmailValid = typeof email === 'string' && email.trim().length > 4;
+    const isMessageValid = typeof message === 'string' && message.trim().length > 3;
+
+    const isValid = isNameValid && isEmailValid && isMessageValid && isChecked;
     this.formComplete = isValid;
+
     return isValid;
   }
 
@@ -74,24 +95,10 @@ export class ContactformComponent {
     }
   }
 
-
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(DialogAnimationsExampleDialog, {
-      width: '250px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
+  openDialog() {
+    this.isDialogVisible = true;
+    setTimeout(() => {
+      this.isDialogVisible = false;
+    }, 3000);
   }
-}
-
-
-
-@Component({
-  selector: 'dialog-animations-example-dialog',
-  template: '<mat-dialog-content class="submitted">Thanks for submit</mat-dialog-content>',
-  standalone: true,
-  imports: [MatButtonModule, MatDialogActions, MatDialogClose, MatDialogTitle, MatDialogContent],
-})
-export class DialogAnimationsExampleDialog {
-  constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>) { }
 }

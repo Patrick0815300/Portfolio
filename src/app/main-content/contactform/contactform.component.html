@@ -13,24 +13,24 @@
         </div>
         <div class="contact-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-          
-                <input #name="ngModel" minlength="2" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
-                @if (!name.valid && name.touched) {
-                    <span class="required-log">Please enter a name</span>
-                }
+                <input #name="ngModel" minlength="2" [(ngModel)]="contactData.name" 
+                       type="text" id="name" name="name" placeholder="Your name" 
+                       required 
+                       [ngClass]="{'invalid-input': !name.valid && name.touched}">
+                <div *ngIf="!name.valid && name.touched" class="required-log">Please enter a name</div>
             
-                <input #email="ngModel" minlength="5" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                @if (email.errors?.['required'] && email.touched) {
-                    <span class="required-log">Email is required</span>
-                }
-                @if (email.errors?.['pattern'] && email.touched) {
-                    <span class="required-log">Please enter a valid email address</span>
-                }
-
-                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" style="height:200px" required></textarea>
-                @if (!message.valid && message.touched) {
-                    <span class="required-log">Please enter a message</span>
-                }
+                <input #email="ngModel" minlength="5" [(ngModel)]="contactData.email" 
+                       type="email" id="email" name="email" placeholder="Your email" 
+                       required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                       [ngClass]="{'invalid-input': !email.valid && email.touched}">
+                <div *ngIf="email.errors?.['required'] && email.touched" class="required-log">Email is required</div>
+                <div *ngIf="email.errors?.['pattern'] && email.touched" class="required-log">Please enter a valid email address</div>
+            
+                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" 
+                          id="message" name="message" placeholder="Your message" style="height:200px" 
+                          required 
+                          [ngClass]="{'invalid-input': !message.valid && message.touched}"></textarea>
+                <div *ngIf="!message.valid && message.touched" class="required-log">Please enter a message</div>
             
                 <mat-checkbox #checked="ngModel" class="checkbox" color="primary" [(ngModel)]="contactData.isChecked" name="privacy">
                     <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
@@ -39,20 +39,19 @@
                     <span class="required-log">Please accept the privacy policy</span>
                 }
      
-                <button mat-raised-button (click)="openDialog('300ms', '150ms')" class="sumbit-btn" type="submit" [disabled]="!isFormComplete()">
+                <button (click)="openDialog()" class="sumbit-btn" type="submit" [disabled]="!isFormComplete()">
                     Send message
                 </button>
-
-                
-
             </form>
             <a href="#aboveTheFold">
                 <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 7.828L6.34302 12.485C5.95255 12.8755 5.31948 12.8755 4.92902 12.485C4.53855 12.0945 4.53855 11.4615 4.92902 11.071L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19.071 11.071C19.4615 11.4615 19.4615 12.0945 19.071 12.485C18.6806 12.8755 18.0475 12.8755 17.657 12.485L13 7.828L13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19L11 7.828Z" fill="white"/>
                 </svg>
             </a>
-        </div>    
+        </div> 
+        <div [@dialogAnimation]="isDialogVisible ? 'visible' : 'hidden'" class="overlay">
+            <span class="submit">Thank you for Submit</span>
+          </div>  
     </div>
     
 </section>
-

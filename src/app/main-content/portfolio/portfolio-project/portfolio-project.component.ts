@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './portfolio-project.component.html',
-  styleUrls: ['./portfolio-project.component.scss']
+  styleUrl: './portfolio-project.component.scss'
 })
 export class PortfolioProjectComponent {
   @Input() imageSrc: string = '';

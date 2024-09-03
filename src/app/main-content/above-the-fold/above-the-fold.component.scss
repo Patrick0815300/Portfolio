@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import '../../../styles.scss';
 
 section {
     position: relative;
@@ -6,11 +6,13 @@ section {
     flex-direction: column;
     width: 100%;
     color: white;
-    max-width: 1440px;
+    max-width: 1920px;
+    margin-top: 100px;
 
     .container {
         display: flex;
         flex-direction: row;
+        margin-right: 100px;
 
         .photo-container {
             position: relative;
@@ -38,6 +40,7 @@ section {
     button {
         all: unset;
         line-height: 27.6px;
+        font-size: 23px;
         padding: 15px 30px;
         border-radius: 10px;
         background-color: $primary1-color;
@@ -117,6 +120,7 @@ section {
     justify-content: space-between;
     margin-top: 90px;
     margin-bottom: 124px;
+    margin-right: 100px;
 
     .media {
         display: flex;
@@ -127,6 +131,11 @@ section {
         img:hover {
             transition: transform 100ms ease-out;
             transform: scale(1.4);
+        }
+
+        a {
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -149,15 +158,17 @@ section {
     }
 
     .scroll-down {
+        font-size: 23px;
         display: flex;
         align-items: center;
         gap: 7px;
-        transform: rotate(90deg);
+        rotate: 90deg;
         transform-origin: top right;
+        animation: bounce 2s infinite;
 
         img {
             width: 16px;
-            rotate: (90deg);
+            rotate: 90deg;
         }
     }
 }
@@ -168,4 +179,23 @@ section {
     left: 0;
     width: 100%;
     z-index: -1;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(-10px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
 }

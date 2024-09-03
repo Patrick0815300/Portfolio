@@ -1,13 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [PortfolioProjectComponent, CommonModule],
+  imports: [CommonModule, PortfolioProjectComponent],
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
   projects = [
@@ -18,7 +18,7 @@ export class PortfolioComponent {
       languages: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       liveTestLink: '#',
-      githubLink: '#'
+      githubLink: 'https://github.com/Patrick0815300/JOIN'
     },
     {
       imageSrc: '../../../assets/img/portfolio/el_pollo_loco.png',
@@ -27,7 +27,7 @@ export class PortfolioComponent {
       languages: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pollo to find coins and bottles to fight against the killer Chicken.',
       liveTestLink: '#',
-      githubLink: '#'
+      githubLink: 'https://github.com/Patrick0815300/El-Pollo-Loco'
     },
     /* {
       imageSrc: '../../../assets/img/portfolio/dabubble.png',

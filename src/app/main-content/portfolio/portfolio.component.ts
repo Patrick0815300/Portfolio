@@ -17,7 +17,7 @@ export class PortfolioComponent {
       projectName: 'Join',
       languages: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      liveTestLink: '#',
+      liveTestLink: 'https://join.patrick-nigrin.de',
       githubLink: 'https://github.com/Patrick0815300/JOIN'
     },
     {
@@ -26,7 +26,7 @@ export class PortfolioComponent {
       projectName: 'El Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pollo to find coins and bottles to fight against the killer Chicken.',
-      liveTestLink: '#',
+      liveTestLink: 'https://epl.patrick-nigrin.de',
       githubLink: 'https://github.com/Patrick0815300/El-Pollo-Loco'
     },
     /* {

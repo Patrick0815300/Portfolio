@@ -15,7 +15,7 @@ export class PortfolioComponent {
       imageSrc: '../../../assets/img/portfolio/join.png',
       altText: 'Join',
       projectName: 'Join',
-      languages: 'Angular | TypeScript | HTML | CSS | Firebase',
+      languages: 'JavaScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       liveTestLink: 'https://join.patrick-nigrin.de',
       githubLink: 'https://github.com/Patrick0815300/JOIN'

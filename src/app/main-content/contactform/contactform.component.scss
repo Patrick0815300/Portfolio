@@ -10,6 +10,10 @@ button {
     all: unset;
 }
 
+a {
+    color: $primary2-color;
+}
+
 .headline {
     display: flex;
     align-items: center;
@@ -29,7 +33,7 @@ button {
         font-weight: 700;
         line-height: 108px;
         text-align: center;
-
+        margin-bottom: 0 !important;
     }
 }
 
@@ -104,6 +108,7 @@ button {
                 outline: none;
                 font-size: 16px;
                 line-height: 19.2px;
+                box-sizing: border-box;
 
                 &:hover,
                 &:focus {
@@ -236,17 +241,25 @@ button {
 
 @media (max-width: 768px) {
     .container {
-        margin-left: 10 !important;
-        padding-left: 25px;
-        padding-right: 25px;
         flex-direction: column;
         justify-content: flex-start;
+        margin-left: 25px;
+        margin-right: 25px;
 
         .text-container {
             width: auto;
 
             h2 {
                 font-size: 23px;
+            }
+        }
+
+        .contact-container {
+            display: block;
+
+            .arrow-up {
+                display: flex;
+                justify-content: end;
             }
         }
     }
@@ -256,6 +269,14 @@ button {
 
         h1 {
             font-size: 45px;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .headline {
+        .line {
+            width: 25px;
         }
     }
 }

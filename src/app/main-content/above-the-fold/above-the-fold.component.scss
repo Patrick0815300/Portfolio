@@ -245,6 +245,13 @@ section {
             align-items: center;
             margin-left: 25px;
             margin-right: 25px;
+
+            .photo-container {
+                .photo {
+                    width: 80vw;
+                    min-width: 80vw;
+                }
+            }
         }
 
         h1 {
@@ -273,6 +280,43 @@ section {
             .mail {
                 display: none;
             }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    section {
+        button {
+            font-size: 16px;
+            line-height: 19.2px;
+        }
+    }
+
+    .headlines {
+        h1 {
+            font-size: 44px;
+            line-height: 44px;
+        }
+
+        h2 {
+            font-size: 28px;
+            line-height: 33.6px;
+            margin-bottom: 0;
+        }
+    }
+
+    .iam {
+        margin-top: 16px;
+
+        .rotate {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+
+    .social-container {
+        .scroll-down {
+            display: none;
         }
     }
 }

@@ -64,3 +64,32 @@ section {
         font-size: 72px;
     }
 }
+
+@media (max-width: 680px) {
+    h1 {
+        font-size: 45px;
+        line-height: 54px;
+    }
+
+    section {
+        .short-line {
+            width: 24px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .long-line {
+            width: 25%;
+        }
+
+        span {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+
+    .projects {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}

@@ -1,7 +1,8 @@
 @import '../../../../styles.scss';
 
 img {
-    width: 400px;
+    width: 40vw;
+    max-width: 450px;
 }
 
 span {
@@ -79,6 +80,7 @@ a {
             border-radius: 10px;
             color: white;
             transition: background-color 125ms ease-in-out;
+            white-space: nowrap;
 
             &:hover {
                 background-color: $primary1-color !important;
@@ -88,6 +90,41 @@ a {
         .btn-git button {
             background-color: transparent;
             border: 1px solid $primary1-color;
+        }
+    }
+}
+
+// ------------------ Media ------------------
+
+@media (max-width: 1150px) {
+    .project-container {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    span {
+        font-size: 16px;
+    }
+
+    .description {
+        .project {
+            font-size: 32px;
+        }
+
+        .languages {
+            font-size: 21px;
+        }
+    }
+
+    .project-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+
+        .description {
+            align-items: center !important;
         }
     }
 }

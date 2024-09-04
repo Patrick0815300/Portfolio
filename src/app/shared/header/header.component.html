@@ -7,4 +7,17 @@
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
     </div>
+    <div class="burger-menu" [ngClass]="{ 'active': menuOpen }" (click)="toggleMenu()">
+        <div class="first lane"></div>
+        <div class="mid lane"></div>
+        <div class="last lane"></div>
+    </div>
 </section>
+<div class="overlay" [ngClass]="{'active': menuOpen}">
+  <div class="container">
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('aboutme')">About me</a>
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('skills')">My skills</a>
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('portfolio')">Portfolio</a>
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('contact')">Contact</a>
+  </div>
+</div>

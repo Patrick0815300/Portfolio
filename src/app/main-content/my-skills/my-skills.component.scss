@@ -1,11 +1,11 @@
 @import '../../../styles.scss';
 
 section {
-    margin-left: 100px;
     margin-top: 180px;
     margin-bottom: 180px;
     display: flex;
     justify-content: space-between;
+    max-width: 1920px;
 }
 
 .icon-container {
@@ -14,6 +14,7 @@ section {
     gap: 88px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-left: 100px;
 
     .icon-item {
         display: flex;
@@ -43,7 +44,7 @@ section {
 
         .speechbubble {
             position: absolute;
-            bottom: 50px;
+            bottom: 50%;
             left: -9px;
             width: 200px;
             height: 200px;
@@ -159,6 +160,16 @@ section {
     }
 }
 
+.mobile {
+    display: none;
+
+    h1 {
+        font-size: 72px;
+        line-height: 108px;
+        font-weight: 700;
+    }
+}
+
 @keyframes bounce {
 
     0%,
@@ -168,5 +179,99 @@ section {
 
     50% {
         transform: translateY(-8px);
+    }
+}
+
+// ------------------ Media ------------------
+
+@media (max-width: 1061px) {
+    .icon-container {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .icon-container {
+        margin-left: 50px;
+    }
+
+    .skill-container {
+        span {
+            margin-right: 50px;
+        }
+
+        button {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-container {
+        width: 100%;
+        margin-left: 25px;
+        margin-right: 25px;
+
+        h1 {
+            display: none;
+        }
+
+        .experience {
+            display: none;
+        }
+
+        .big-font {
+            font-size: 23px;
+        }
+
+        .line {
+            display: none;
+        }
+
+        a {
+            width: fit-content;
+            align-self: center;
+        }
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .line {
+            width: 34px;
+            border: 2px solid $primary2-color;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            margin-bottom: 0;
+            margin-left: 16px;
+        }
+
+        span {
+            font-size: 16px;
+            margin-right: 25px;
+            margin-left: 25px;
+            width: 450px;
+            align-self: center;
+            margin-bottom: 36px;
+        }
+
+    }
+
+    .icon-container {
+        max-width: none;
     }
 }

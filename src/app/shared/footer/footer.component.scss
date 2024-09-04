@@ -8,8 +8,7 @@ section {
     border: 4px, 0px, 0px, 0px;
     border-top: 4px solid #70E61C;
     height: 291px;
-    padding-left: 100px;
-    padding-right: 100px;
+    max-width: 1920px;
     margin-top: 90px;
 
     span {
@@ -31,6 +30,7 @@ section {
     font-weight: 400;
     line-height: 19.2px;
     gap: 16px;
+    margin-left: 100px;
 
     img {
         width: 150px;
@@ -67,6 +67,7 @@ section {
 .socialbtns {
     display: flex;
     gap: 30px;
+    margin-right: 100px;
 
     img {
         width: 30px;
@@ -75,5 +76,30 @@ section {
 
     img:hover {
         transform: scale(1.4);
+    }
+}
+
+// --------------------- Media ---------------------
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .privacy {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+
+        .imprint {
+            margin-top: 24px;
+        }
+    }
+
+    .socialbtns {
+        margin-right: 0;
     }
 }

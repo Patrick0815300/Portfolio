@@ -12,6 +12,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 1920px;
 
     .headline {
         display: flex;
@@ -42,8 +43,24 @@ section {
     justify-content: center;
     flex-direction: row;
     gap: 160px;
+    margin-left: 100px;
+    margin-right: 100px;
 
     &:nth-child(2n) {
         flex-direction: row-reverse;
+    }
+}
+
+// ------------------ Media ------------------
+
+@media (max-width: 1150px) {
+    .projects {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 72px;
     }
 }

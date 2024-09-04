@@ -4,6 +4,7 @@ section {
     position: relative;
     display: flex;
     justify-content: space-between;
+    max-width: 1920px;
     //overflow: hidden;
 
     h1 {
@@ -43,10 +44,13 @@ section {
 .photo-container {
     display: flex;
     align-items: center;
+    overflow-x: hidden;
 
-    img {
+    .photo {
         border-radius: 50%;
         border: 4px solid $primary1-color;
+        width: 40vw;
+        max-width: 450px;
     }
 
     .line {
@@ -71,4 +75,40 @@ section {
     overflow-x: hidden;
     box-sizing: border-box;
     width: 300px;
+}
+
+
+
+// ------------------ Media ------------------
+
+@media (max-width: 1024px) {
+    .about-me-container {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-size: 72px;
+        }
+    }
+
+    .about-me-container {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .photo-container {
+        .photo {
+            display: none;
+        }
+
+        .line {
+            display: none;
+        }
+    }
 }

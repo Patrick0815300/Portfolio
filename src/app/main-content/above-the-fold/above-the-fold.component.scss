@@ -18,8 +18,8 @@ section {
             position: relative;
 
             img {
-                width: 646px;
-                height: 705px;
+                width: 50vw;
+                max-width: 650px;
             }
 
             .photo {
@@ -31,7 +31,8 @@ section {
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 750px;
+                width: 56vw;
+                max-width: 750px;
                 z-index: 1;
             }
         }
@@ -197,5 +198,81 @@ section {
 
     60% {
         transform: translateX(-5px);
+    }
+}
+
+
+// -------------------------- Media --------------------------
+
+@media (max-width: 1024px) {
+    section {
+        .container {
+            margin-right: 50px;
+        }
+
+        .social-container {
+            margin-right: 50px;
+        }
+
+
+    }
+
+
+}
+
+@media (max-width: 990px) {
+    .iam {
+        .rotate {
+            font-size: 42px;
+        }
+    }
+
+    .headlines {
+        h1 {
+            font-size: 72px;
+        }
+
+        h2 {
+            font-size: 48px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+
+    .iam {
+        .headlines-container {
+            .rotate-container {
+                height: auto;
+            }
+        }
+    }
+
+    .social-container {
+        margin-right: 25px;
+        margin-bottom: 100px;
+
+        .scroll-down {
+            font-size: 21px;
+            white-space: nowrap;
+        }
+
+        .media {
+            .mail {
+                display: none;
+            }
+        }
     }
 }

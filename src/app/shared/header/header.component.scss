@@ -12,12 +12,14 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 100px;
     background-color: $background-color;
     z-index: 1000;
+    max-width: 1920px;
+    box-sizing: border-box;
 
     img {
         width: 150px;
+        margin-left: 100px;
     }
 
     div {
@@ -34,6 +36,8 @@ section {
     }
 
     .links {
+        margin: 37px 100px 37px 0;
+
         a {
             position: relative;
             display: inline-block;
@@ -65,4 +69,125 @@ section {
             }
         }
     }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-right: 25px;
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 30px;
+
+        .lane {
+            width: 30px;
+            height: 2px;
+            background-color: white;
+            transition: all 125ms ease;
+        }
+
+        @keyframes shrinkInwards {
+            0% {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+        }
+
+        &.active {
+            .first {
+                width: 40px;
+                transform: rotate(45deg) translate(7px, 13px);
+            }
+
+            .mid {
+                transform-origin: center;
+                animation: shrinkInwards 0.7s forwards;
+            }
+
+            .last {
+                width: 40px;
+                transform: rotate(-45deg) translate(7px, -13px);
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+
+    &.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        a {
+            position: relative;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+
+            &:active {
+                color: $primary1-color;
+            }
+
+            &:hover::after,
+            &:active::after {
+                width: 60%;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -12px;
+                width: 0;
+                height: 2px;
+                background-color: $primary2-color;
+                transition: width 250ms ease-in-out;
+            }
+        }
+    }
+}
+
+// ---------------------------- Media ----------------------------
+
+@media (max-width: 768px) {
+    section {
+        .links {
+            display: none;
+        }
+
+        a {
+            margin-top: 37px;
+            margin-bottom: 37px;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            width: 120px;
+        }
+    }
+
 }

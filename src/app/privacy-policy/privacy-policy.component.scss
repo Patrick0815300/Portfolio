@@ -13,4 +13,18 @@ section {
     .imprint {
         margin-bottom: 64px;
     }
+
+    a {
+        color: $primary2-color;
+    }
+}
+
+// -------------------- Media --------------------
+
+@media (max-width: 768px) {
+    section {
+        margin-top: 110px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }

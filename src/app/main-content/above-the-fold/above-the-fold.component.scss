@@ -19,7 +19,7 @@ section {
 
             img {
                 width: 50vw;
-                max-width: 650px;
+                max-width: 600px;
             }
 
             .photo {
@@ -29,7 +29,7 @@ section {
 
             .shadow {
                 position: absolute;
-                bottom: 0;
+                bottom: 20%;
                 left: 0;
                 width: 56vw;
                 max-width: 750px;
@@ -63,6 +63,26 @@ section {
         }
     }
 }
+
+.animation {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 200ms;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .iam {
     width: 100%;

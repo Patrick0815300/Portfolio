@@ -1,7 +1,7 @@
 @import '../../../../styles.scss';
 
 img {
-    width: 60vw;
+    width: 50vw;
     max-width: 450px;
 }
 
@@ -102,6 +102,19 @@ a {
     }
 }
 
+@media (max-width: 990px) {
+    .project-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+
+        .description {
+            align-items: center !important;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     span {
         font-size: 16px;
@@ -116,17 +129,6 @@ a {
         .languages {
             font-size: 21px;
             text-align: center;
-        }
-    }
-
-    .project-container {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        gap: 0 !important;
-
-        .description {
-            align-items: center !important;
         }
     }
 }

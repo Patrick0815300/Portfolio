@@ -8,11 +8,23 @@ h1 {
     margin-right: 32px;
 }
 
+.container {
+
+    .shadow {
+        position: absolute;
+        width: 50vw;
+        left: -35%;
+        top: -20%;
+        z-index: -1;
+    }
+}
+
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 1920px;
+    position: relative;
 
     .headline {
         display: flex;

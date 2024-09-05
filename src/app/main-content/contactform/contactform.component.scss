@@ -4,6 +4,7 @@ section {
     display: flex;
     flex-direction: column;
     max-width: 1920px;
+    position: relative;
 }
 
 button {
@@ -12,6 +13,24 @@ button {
 
 a {
     color: $primary2-color;
+}
+
+.shadow-container {
+    .shadow-purple {
+        position: absolute;
+        z-index: -1;
+        top: -60%;
+        right: -300px;
+        width: 500px;
+    }
+
+    .shadow-green {
+        position: absolute;
+        z-index: -1;
+        width: 500px;
+        top: 30%;
+        left: -350px;
+    }
 }
 
 .headline {
@@ -237,6 +256,14 @@ a {
     .container {
         margin-left: 50px;
     }
+}
+
+@media (max-width: 990px) {
+
+    .headline {
+        margin-top: 100px;
+    }
+
 }
 
 @media (max-width: 768px) {

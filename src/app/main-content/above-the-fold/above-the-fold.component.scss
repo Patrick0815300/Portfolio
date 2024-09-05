@@ -13,13 +13,14 @@ section {
         display: flex;
         flex-direction: row;
         margin-right: 100px;
+        margin-left: 100px;
 
         .photo-container {
             position: relative;
 
             img {
                 width: 50vw;
-                max-width: 600px;
+                max-width: 100%;
             }
 
             .photo {
@@ -29,11 +30,11 @@ section {
 
             .shadow {
                 position: absolute;
-                bottom: 20%;
+                bottom: 10%;
                 left: 0;
-                width: 56vw;
+                width: 40vw;
                 max-width: 750px;
-                z-index: 1;
+                z-index: -1;
             }
         }
     }
@@ -228,6 +229,7 @@ section {
     section {
         .container {
             margin-right: 50px;
+            margin-left: 50px;
         }
 
         .social-container {

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnimationDirective],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
@@ -22,4 +23,6 @@ export class MySkillsComponent {
     { src: '../../../assets/img/skills/material_design.png', alt: 'material_design', name: 'Material Design' },
     { src: '../../../assets/img/skills/learning_white.svg', alt: 'learning', name: 'Continually Learning', isSvg: true }
   ];
+
+  @Input() visibility: string = 'hidden';
 }

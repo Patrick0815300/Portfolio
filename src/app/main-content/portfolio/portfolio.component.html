@@ -1,12 +1,12 @@
 <section>
-    <div class="headline">
+    <div appScrollAnimation [delay]="200" class="headline">
         <div class="short-line"></div>
         <h1>Portfolio</h1>
         <div class="long-line"></div>
     </div>
-    <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+    <span appScrollAnimation [delay]="400" >Explore a selection of my work here - Interact with projects to see my skills in action.</span>
 
-    <div *ngFor="let project of projects; let i = index" class="projects">
+    <div *ngFor="let project of projects; let i = index" appScrollAnimation [delay]="600 + i * 400" class="projects">
         <app-portfolio-project 
             [imageSrc]="project.imageSrc"
             [altText]="project.altText"

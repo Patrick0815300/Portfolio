@@ -1,19 +1,19 @@
 <section>
     <div class="about-me-container">
-         <h1>About me</h1>
-         <span>
+         <h1 appScrollAnimation [delay]="200">About me</h1>
+         <span appScrollAnimation [delay]="200">
              Hi, I'm a german speaking Frontend Developer based in Jena. 
              Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.
          </span>
-         <div class="margin-top">
+         <div appScrollAnimation [delay]="300" class="margin-top">
              <img src="../../../assets/img/aboutme/location_green.png" alt="location_green">
              <span>Felxible in terms of working enviroments, I can work effectively both on-site in Jena and remotely.</span>
          </div>
-         <div>
+         <div appScrollAnimation [delay]="400">
              <img src="../../../assets/img/aboutme/bulb_green.png" alt="bulb_green">
              <span>I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.</span>
          </div>
-         <div>
+         <div appScrollAnimation [delay]="500">
              <img src="../../../assets/img/aboutme/puzzle_green.png" alt="puzzle_green">
              <span>
                  In my profession, programming isn't just about writing code; it's a creative form of problem-solving. 
@@ -23,8 +23,8 @@
          </div>
      </div>
      <div class="photo-container">
-         <img class="photo" src="../../../assets/img/general/example2.png" alt="Patrick2">
-         <div class="line"></div>
+         <img appScrollAnimation [delay]="200" [@scrollAnimation]="visibility" class="photo" src="../../../assets/img/general/example2.png" alt="Patrick2">
+         <div appScrollAnimation [delay]="200" [@scrollAnimation]="visibility" class="line"></div>
          <div class="overflow-wrapper">
              <img class="shadow" src="../../../assets/img/background/30. purple_shadow_about_me.png" alt="purple_shadow_about_me">
          </div>

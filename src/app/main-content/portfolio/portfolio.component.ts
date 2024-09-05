@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, PortfolioProjectComponent],
+  imports: [CommonModule, PortfolioProjectComponent, ScrollAnimationDirective],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

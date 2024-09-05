@@ -1,5 +1,5 @@
 <section>
-  <div class="mobile">
+  <div appScrollAnimation [delay]="200" class="mobile">
       <div>
         <h1>My skills</h1>
         <div class="line"></div>
@@ -7,7 +7,7 @@
     <span>I have gained experience in building projects with different frontend technologies and concepts.</span>
   </div>
     <div class="icon-container">
-        <div *ngFor="let skill of skills" class="icon-item" [ngClass]="{ 'learning': skill.isSvg }">
+        <div *ngFor="let skill of skills; let i = index" appScrollAnimation [delay]="200 + i * 70" class="icon-item" [ngClass]="{ 'learning': skill.isSvg }">
             <ng-container *ngIf="!skill.isSvg">
                 <img [src]="skill.src" [alt]="skill.alt">
             </ng-container>
@@ -31,7 +31,7 @@
         </div>
     </div>
       
-    <div class="skill-container">
+    <div appScrollAnimation [delay]="200" class="skill-container">
         <div>
             <h1>My skills</h1>
             <div class="line"></div>

@@ -1,45 +1,51 @@
 <section>
-    <div class="headline">
+    <div appScrollAnimation [delay]="200" class="headline">
         <div class="line"></div>
         <h1>Contact</h1>
     </div>
     <div class="container">
         <div class="text-container">
-            <h2>got a problem to solve?</h2>
-            <span>Contact me through this form, I am interested in hearing from you, 
+            <h2 appScrollAnimation [delay]="400" >got a problem to solve?</h2>
+            <span appScrollAnimation [delay]="600">Contact me through this form, I am interested in hearing from you, 
                 knowing your ideas and contributing to your projects with my work.
             </span>
-            <span><br><br>Need a Frontend developer? <span><br><br><b>Contact me!</b></span></span>
+            <span appScrollAnimation [delay]="800"><br><br>Need a Frontend developer? <span><br><br><b>Contact me!</b></span></span>
         </div>
         <div class="contact-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <input #name="ngModel" minlength="2" [(ngModel)]="contactData.name" 
-                       type="text" id="name" name="name" placeholder="Your name" 
-                       required 
-                       [ngClass]="{'invalid-input': !name.valid && name.touched}">
+                <input 
+                    appScrollAnimation [delay]="400"
+                    #name="ngModel" minlength="2" [(ngModel)]="contactData.name" 
+                    type="text" id="name" name="name" placeholder="Your name" 
+                    required 
+                    [ngClass]="{'invalid-input': !name.valid && name.touched}">
                 <div *ngIf="!name.valid && name.touched" class="required-log">Please enter a name</div>
             
-                <input #email="ngModel" minlength="5" [(ngModel)]="contactData.email" 
-                       type="email" id="email" name="email" placeholder="Your email" 
-                       required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                       [ngClass]="{'invalid-input': !email.valid && email.touched}">
+                <input 
+                    appScrollAnimation [delay]="600"    
+                    #email="ngModel" minlength="5" [(ngModel)]="contactData.email" 
+                    type="email" id="email" name="email" placeholder="Your email" 
+                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    [ngClass]="{'invalid-input': !email.valid && email.touched}">
                 <div *ngIf="email.errors?.['required'] && email.touched" class="required-log">Email is required</div>
                 <div *ngIf="email.errors?.['pattern'] && email.touched" class="required-log">Please enter a valid email address</div>
             
-                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" 
-                          id="message" name="message" placeholder="Your message" style="height:200px" 
-                          required 
-                          [ngClass]="{'invalid-input': !message.valid && message.touched}"></textarea>
+                <textarea 
+                    appScrollAnimation [delay]="800"
+                    #message="ngModel" minlength="4" [(ngModel)]="contactData.message" 
+                    id="message" name="message" placeholder="Your message" style="height:200px" 
+                    required 
+                    [ngClass]="{'invalid-input': !message.valid && message.touched}"></textarea>
                 <div *ngIf="!message.valid && message.touched" class="required-log">Please enter a message</div>
             
-                <mat-checkbox #checked="ngModel" class="checkbox" color="primary" [(ngModel)]="contactData.isChecked" name="privacy">
+                <mat-checkbox appScrollAnimation [delay]="1000" #checked="ngModel" class="checkbox" color="primary" [(ngModel)]="contactData.isChecked" name="privacy">
                     <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
                 </mat-checkbox>
                 @if (!checked) {
                     <span class="required-log">Please accept the privacy policy</span>
                 }
      
-                <button (click)="openDialog()" class="sumbit-btn" type="submit" [disabled]="!isFormComplete()">
+                <button appScrollAnimation [delay]="1200" (click)="openDialog()" class="sumbit-btn" type="submit" [disabled]="!isFormComplete()">
                     Send message
                 </button>
             </form>

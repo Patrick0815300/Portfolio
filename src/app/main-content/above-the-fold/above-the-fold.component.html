@@ -1,32 +1,32 @@
 <section>
     <div class="container">
         <div class="photo-container">
-            <img class="photo" src="../../../assets/img/general/example1.png" alt="Patrick1">
+            <img appScrollAnimation [delay]="200" class="photo" src="../../../assets/img/general/example1.png" alt="Patrick1">
             <img class="shadow" src="../../../assets/img/background/29. photo_shadows.png" alt="Photo-Shadow">
         </div>
         
         <div class="iam">
             <div class="headlines-container">
-                <div class="rotate-container"><span class="rotate">I am</span></div>
+                <div appScrollAnimation [delay]="400" class="rotate-container"><span class="rotate">I am</span></div>
                 <div class="headlines">
-                    <h1><b>Patrick Nigrin</b></h1>
-                    <h2>FRONTEND DEVELOPER</h2>
+                    <h1 appScrollAnimation [delay]="400"><b>Patrick Nigrin</b></h1>
+                    <h2 appScrollAnimation [delay]="600">FRONTEND DEVELOPER</h2>
                 </div>
             </div>
-            <a href="#contact"><button>Let's talk!</button></a>
+            <a appScrollAnimation [delay]="600" href="#contact"><button>Let's talk!</button></a>
             
         </div>
     </div>
     
     <div class="social-container">
-        <div class="media">
+        <div appScrollAnimation [delay]="800" class="media">
             <div class="line"></div>
             <a href="https://github.com/Patrick0815300"><img src="../../assets/img/socialbuttons/github.png" alt=""></a>
             <a href=""><img src="../../../assets/img/socialbuttons/email.png" alt=""></a>
             <a href="https://www.linkedin.com/in/patrick-nigrin-686b98285/"><img src="../../../assets/img/socialbuttons/linkedin.png" alt=""></a>
             <a class="mail" href="mailto:mail@patrick-nigrin.de">mail&#64;patrick-nigrin.de</a>
         </div>
-        <div class="scroll-down">
+        <div appScrollAnimation [delay]="800" class="scroll-down">
             <span>Scroll down</span>
             <img src="../../../assets/img/general/arrowup_white.png" alt="arrowup_white">
         </div>        

@@ -1,56 +1,54 @@
 <section>
     <div class="shadow-container">
-        <img class="shadow-purple" src="../../../assets/img/background/32 purple_shadow_portfolio.png" alt="green-shadow">
+        <div class="overflow-wrapper"><img src="../../../assets/img/background/32 purple_shadow_portfolio.png" alt="green-shadow"></div>
         <img class="shadow-green" src="../../../assets/img/background/31. green_shadow_skills_portfolio.png" alt="green-shadow">
     </div>
     <div appScrollAnimation [delay]="200" class="headline">
         <div class="line"></div>
-        <h1>Contact</h1>
+        <h1>{{ 'CONTACT_TITLE' | translate }}</h1>
     </div>
     <div class="container">
         <div class="text-container">
-            <h2 appScrollAnimation [delay]="400" >got a problem to solve?</h2>
-            <span appScrollAnimation [delay]="600">Contact me through this form, I am interested in hearing from you, 
-                knowing your ideas and contributing to your projects with my work.
-            </span>
-            <span appScrollAnimation [delay]="800"><br><br>Need a Frontend developer? <span><br><br><b>Contact me!</b></span></span>
+            <h2 appScrollAnimation [delay]="400">{{ 'CONTACT_SUBTITLE' | translate }}</h2>
+            <span appScrollAnimation [delay]="600">{{ 'CONTACT_DESCRIPTION' | translate }}</span><br><br>
+            <span appScrollAnimation [delay]="800">{{ 'CONTACT_CALL_TO_ACTION' | translate }}</span>
         </div>
         <div class="contact-container">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <input 
                     appScrollAnimation [delay]="400"
                     #name="ngModel" minlength="2" [(ngModel)]="contactData.name" 
-                    type="text" id="name" name="name" placeholder="Your name" 
+                    type="text" id="name" name="name" placeholder="{{ 'CONTACT_NAME_PLACEHOLDER' | translate }}" 
                     required 
                     [ngClass]="{'invalid-input': !name.valid && name.touched}">
-                <div *ngIf="!name.valid && name.touched" class="required-log">Please enter a name</div>
+                <div *ngIf="!name.valid && name.touched" class="required-log">{{ 'CONTACT_NAME_ERROR' | translate }}</div>
             
                 <input 
                     appScrollAnimation [delay]="600"    
                     #email="ngModel" minlength="5" [(ngModel)]="contactData.email" 
-                    type="email" id="email" name="email" placeholder="Your email" 
+                    type="email" id="email" name="email" placeholder="{{ 'CONTACT_EMAIL_PLACEHOLDER' | translate }}" 
                     required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                     [ngClass]="{'invalid-input': !email.valid && email.touched}">
-                <div *ngIf="email.errors?.['required'] && email.touched" class="required-log">Email is required</div>
-                <div *ngIf="email.errors?.['pattern'] && email.touched" class="required-log">Please enter a valid email address</div>
+                <div *ngIf="email.errors?.['required'] && email.touched" class="required-log">{{ 'CONTACT_EMAIL_REQUIRED' | translate }}</div>
+                <div *ngIf="email.errors?.['pattern'] && email.touched" class="required-log">{{ 'CONTACT_EMAIL_ERROR' | translate }}</div>
             
                 <textarea 
                     appScrollAnimation [delay]="800"
                     #message="ngModel" minlength="4" [(ngModel)]="contactData.message" 
-                    id="message" name="message" placeholder="Your message" style="height:200px" 
+                    id="message" name="message" placeholder="{{ 'CONTACT_MESSAGE_PLACEHOLDER' | translate }}" style="height:200px" 
                     required 
                     [ngClass]="{'invalid-input': !message.valid && message.touched}"></textarea>
-                <div *ngIf="!message.valid && message.touched" class="required-log">Please enter a message</div>
+                <div *ngIf="!message.valid && message.touched" class="required-log">{{ 'CONTACT_MESSAGE_ERROR' | translate }}</div>
             
                 <mat-checkbox appScrollAnimation [delay]="1000" #checked="ngModel" class="checkbox" color="primary" [(ngModel)]="contactData.isChecked" name="privacy">
-                    <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                    <span>{{ 'CONTACT_PRIVACY' | translate }} <a href="privacy">{{ 'CONTACT_PRIVACY_LINK' | translate }}</a></span>
                 </mat-checkbox>
                 @if (!checked) {
-                    <span class="required-log">Please accept the privacy policy</span>
+                    <span class="required-log">{{ 'CONTACT_PRIVACY_ERROR' | translate }}</span>
                 }
      
-                <button appScrollAnimation [delay]="1200" (click)="openDialog()" class="sumbit-btn" type="submit" [disabled]="!isFormComplete()">
-                    Send message
+                <button appScrollAnimation [delay]="1000" class="sumbit-btn" type="submit" [disabled]="!isFormComplete()">
+                    {{ 'CONTACT_BUTTON' | translate }}
                 </button>
             </form>
             <a class="arrow-up" href="#aboveTheFold">
@@ -60,8 +58,7 @@
             </a>
         </div> 
         <div [@dialogAnimation]="isDialogVisible ? 'visible' : 'hidden'" class="overlay">
-            <span class="submit">Thank you for Submit</span>
-          </div>  
+            <span class="submit">{{ 'CONTACT_SUBMIT_MESSAGE' | translate }}</span>
+        </div>  
     </div>
-    
 </section>

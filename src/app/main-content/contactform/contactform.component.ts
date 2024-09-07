@@ -1,32 +1,31 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, JsonPipe } from '@angular/common';
-import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, MatButtonModule, CommonModule, ScrollAnimationDirective],
+  imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, MatButtonModule, CommonModule, ScrollAnimationDirective, TranslateModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
   animations: [
     trigger('dialogAnimation', [
-      // "hidden" State
       state('hidden', style({
         transform: 'translateY(100%)',
         opacity: 0,
-        display: 'none'
+        visibility: 'hidden'
       })),
-      // "visible" State
       state('visible', style({
         transform: 'translateY(0)',
         opacity: 1,
-        display: 'flex'
+        visibility: 'visible'
       })),
       transition('hidden => visible', [
         style({ display: 'flex' }),
@@ -52,6 +51,10 @@ export class ContactformComponent {
     isChecked: false
   }
 
+  ngOnInit() {
+    this.isDialogVisible = false;
+  }
+
   isFormComplete(): boolean {
     const { name, email, message, isChecked } = this.contactData;
     const isNameValid = typeof name === 'string' && name.trim().length > 1;
@@ -64,10 +67,17 @@ export class ContactformComponent {
     return isValid;
   }
 
+  openDialog() {
+    this.isDialogVisible = true;
+    setTimeout(() => {
+      this.isDialogVisible = false;
+    }, 3000);
+  }
+
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://patrick-nigrin.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -91,15 +101,8 @@ export class ContactformComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      this.openDialog();
       ngForm.resetForm();
     }
-  }
-
-  openDialog() {
-    this.isDialogVisible = true;
-    setTimeout(() => {
-      this.isDialogVisible = false;
-    }, 3000);
   }
 }

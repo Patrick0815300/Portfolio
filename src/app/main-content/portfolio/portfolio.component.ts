@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, PortfolioProjectComponent, ScrollAnimationDirective],
+  imports: [CommonModule, PortfolioProjectComponent, ScrollAnimationDirective, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -17,7 +18,7 @@ export class PortfolioComponent {
       altText: 'Join',
       projectName: 'Join',
       languages: 'JavaScript | HTML | CSS | Firebase',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'JOIN_DESCRIPTION',
       liveTestLink: 'https://join.patrick-nigrin.de',
       githubLink: 'https://github.com/Patrick0815300/JOIN'
     },
@@ -26,7 +27,7 @@ export class PortfolioComponent {
       altText: 'el_pollo_loco',
       projectName: 'El Pollo Loco',
       languages: 'JavaScript | HTML | CSS',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pollo to find coins and bottles to fight against the killer Chicken.',
+      description: 'EL_POLLO_DESCRIPTION',
       liveTestLink: 'https://epl.patrick-nigrin.de',
       githubLink: 'https://github.com/Patrick0815300/El-Pollo-Loco'
     },

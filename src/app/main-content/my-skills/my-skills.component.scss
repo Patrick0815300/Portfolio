@@ -107,7 +107,7 @@ section {
     }
 
     .line {
-        width: 68px;
+        min-width: 68px;
         border: 2px solid $primary2-color;
         border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
@@ -290,6 +290,7 @@ section {
             font-size: 45px;
             line-height: 54px;
             margin-bottom: 0;
+            margin-left: 25px;
         }
 
         span {

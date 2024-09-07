@@ -21,6 +21,8 @@ body {
     line-height: 27.6px;
     color: white;
     overflow: visible;
+    overflow-x: hidden;
+    position: relative;
 }
 
 a {

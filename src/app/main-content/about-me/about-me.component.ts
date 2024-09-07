@@ -1,10 +1,12 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
+import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [ScrollAnimationDirective],
+  imports: [ScrollAnimationDirective, TranslateModule, CommonModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })

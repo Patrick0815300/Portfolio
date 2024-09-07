@@ -4,10 +4,12 @@ section {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     color: white;
     max-width: 1920px;
     margin-top: 100px;
+    height: calc(100vh - 108px) !important;
 
     .container {
         display: flex;
@@ -21,6 +23,8 @@ section {
             img {
                 width: 50vw;
                 max-width: 100%;
+                max-height: 700px;
+                object-fit: contain;
             }
 
             .photo {
@@ -141,7 +145,6 @@ section {
     align-items: center;
     justify-content: space-between;
     margin-top: 90px;
-    margin-bottom: 124px;
     margin-right: 100px;
 
     .media {
@@ -158,6 +161,25 @@ section {
         a {
             display: flex;
             align-items: center;
+        }
+
+        .mail {
+            position: relative;
+
+            &:hover::after {
+                width: 60%;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                width: 0;
+                height: 2px;
+                background-color: $primary1-color;
+                transition: width 125ms ease-in-out;
+            }
         }
     }
 
@@ -235,8 +257,6 @@ section {
         .social-container {
             margin-right: 50px;
         }
-
-
     }
 
 
@@ -270,8 +290,7 @@ section {
 
             .photo-container {
                 .photo {
-                    width: 80vw;
-                    min-width: 80vw;
+                    width: 30vw;
                 }
             }
         }
@@ -291,7 +310,7 @@ section {
 
     .social-container {
         margin-right: 25px;
-        margin-bottom: 100px;
+        margin-top: 35px;
 
         .scroll-down {
             font-size: 21px;
@@ -311,6 +330,14 @@ section {
         button {
             font-size: 16px;
             line-height: 19.2px;
+        }
+
+        .container {
+            .photo-container {
+                .photo {
+                    min-width: 250px;
+                }
+            }
         }
     }
 
@@ -341,4 +368,6 @@ section {
             display: none;
         }
     }
+
+
 }

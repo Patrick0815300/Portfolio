@@ -3,10 +3,16 @@
         <img src="../../../assets/img/general/logo.png" alt="Logo">
     </a>
     <div class="links">
-        <a href="#aboutme">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+      <a href="#aboutme" [class.active]="currentSection === 'aboutme'">{{ 'HEADER_ABOUT_ME' | translate }}</a>
+      <a href="#skills" [class.active]="currentSection === 'skills'">{{ 'HEADER_SKILLS' | translate }}</a>
+      <a href="#portfolio" [class.active]="currentSection === 'portfolio'">{{ 'HEADER_PORTFOLIO' | translate }}</a>
+      <div class="lang-container">
+        <span class="lang" [class.active]="isActiveLang('de')" (click)="switchLanguage('de')">de</span>
+        <span>|</span>
+        <span class="lang" [class.active]="isActiveLang('en')" (click)="switchLanguage('en')">en</span>
+      </div>
     </div>
+    
     <div class="burger-menu" [ngClass]="{ 'active': menuOpen }" (click)="toggleMenu()">
         <div class="first lane"></div>
         <div class="mid lane"></div>
@@ -15,9 +21,14 @@
 </section>
 <div class="overlay" [ngClass]="{'active': menuOpen}">
   <div class="container">
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('aboutme')">About me</a>
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('skills')">My skills</a>
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('portfolio')">Portfolio</a>
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('contact')">Contact</a>
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('aboutme')">{{ 'HEADER_ABOUT_ME' | translate }}</a>
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('skills')">{{ 'HEADER_SKILLS' | translate }}</a>
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('portfolio')">{{ 'HEADER_SKILLS' | translate }}</a>
+    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('contact')">{{ 'CONTACT_TITLE' | translate }}</a>
+    <div class="lang-container">
+      <span class="lang" [class.active]="isActiveLang('de')" (click)="switchLanguage('de')">de</span>
+      <span>|</span>
+      <span class="lang" [class.active]="isActiveLang('en')" (click)="switchLanguage('en')">en</span>
+    </div>
   </div>
 </div>

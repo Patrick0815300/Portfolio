@@ -5,10 +5,10 @@
     <div class="description">
         <span class="project">{{ projectName }}</span>
         <span class="languages">{{ languages }}</span>
-        <span>{{ description }}</span>
+        <span>{{ description | translate }}</span>
         <div class="buttons">
-            <a [href]="liveTestLink"><button>Live test</button></a>
-            <a class="btn-git" [href]="githubLink"><button>Github</button></a>
+            <a [href]="liveTestLink" target="_blank"><button>Live test</button></a>
+            <a class="btn-git" [href]="githubLink" target="_blank"><button>Github</button></a>
         </div>
     </div>
     <div *ngIf="reverse" class="image">

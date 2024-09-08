@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 import { TranslateModule } from '@ngx-translate/core';
+import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-contactform',
@@ -38,7 +39,7 @@ import { TranslateModule } from '@ngx-translate/core';
   ]
 })
 export class ContactformComponent {
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private scrollService: ScrollService) { }
 
   http = inject(HttpClient)
   formComplete: boolean = false;
@@ -104,5 +105,10 @@ export class ContactformComponent {
       this.openDialog();
       ngForm.resetForm();
     }
+  }
+
+
+  onSectionClick(sectionId: string) {
+    this.scrollService.scrollToSection(sectionId);
   }
 }

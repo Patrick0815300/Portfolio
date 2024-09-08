@@ -10,16 +10,11 @@ import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
-    { path: 'abovethefold', component: AboveTheFoldComponent },
-    { path: 'aboutme', component: AboutMeComponent },
-    { path: 'skills', component: MySkillsComponent },
-    { path: 'portfolio', component: PortfolioComponent },
     { path: 'privacy', component: PrivacyPolicyComponent }
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes, {
-        anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled',
     })],
     exports: [RouterModule]

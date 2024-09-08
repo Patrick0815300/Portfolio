@@ -7,7 +7,8 @@ import { ContactformComponent } from './contactform/contactform.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../shared/header/header.component';
-import { RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-main-content',
@@ -27,6 +28,27 @@ import { RouterModule } from '@angular/router';
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent {
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        // Extrahiere das Fragment nur, wenn es vorhanden ist
+        const fragment = this.router.url.split('#')[1];
+        if (fragment) {
+          this.scrollToSection(fragment); // Scroll zu dem Abschnitt
+          this.currentSection = fragment; // Setze die aktuelle Sektion
+        }
+      });
+  }
+
+  // Methode zum Scrollen zum Abschnitt basierend auf der ID
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // Sanftes Scrollen
+    }
+  }
 
   @Output() sectionChange = new EventEmitter<string>();
 

@@ -1,11 +1,11 @@
 <section>
-    <a (click)="onSectionClick('abovethefold')">
+    <a [routerLink]="['/']" fragment="abovethefold">
         <img src="../../../assets/img/general/logo.png" alt="Logo">
     </a>
     <div class="links">
-      <a (click)="onSectionClick('aboutme')" [class.active]="currentSection === 'aboutme'">{{ 'HEADER_ABOUT_ME' | translate }}</a>
-      <a (click)="onSectionClick('skills')" [class.active]="currentSection === 'skills'">{{ 'HEADER_SKILLS' | translate }}</a>
-      <a (click)="onSectionClick('portfolio')" [class.active]="currentSection === 'portfolio'">{{ 'HEADER_PORTFOLIO' | translate }}</a>
+      <a [routerLink]="['/']" fragment="aboutme" [class.active]="currentSection === 'aboutme'">{{ 'HEADER_ABOUT_ME' | translate }}</a>
+      <a [routerLink]="['/']" fragment="skills" [class.active]="currentSection === 'skills'">{{ 'HEADER_SKILLS' | translate }}</a>
+      <a [routerLink]="['/']" fragment="portfolio" [class.active]="currentSection === 'portfolio'">{{ 'HEADER_PORTFOLIO' | translate }}</a>
       <div class="lang-container">
         <span class="lang" [class.active]="isActiveLang('de')" (click)="switchLanguage('de')">de</span>
         <span>|</span>

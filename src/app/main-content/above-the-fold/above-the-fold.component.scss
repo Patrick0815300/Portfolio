@@ -23,13 +23,13 @@ section {
             img {
                 width: 50vw;
                 max-width: 100%;
-                max-height: 700px;
+                //max-height: 700px;
                 object-fit: contain;
             }
 
             .photo {
                 position: relative;
-                z-index: 2;
+                z-index: -2;
             }
 
             .shadow {
@@ -38,7 +38,7 @@ section {
                 left: 0;
                 width: 40vw;
                 max-width: 750px;
-                z-index: -1;
+                z-index: -3;
             }
         }
     }
@@ -219,7 +219,7 @@ section {
 
 .hero-background {
     position: absolute;
-    top: 350px;
+    top: 10vw;
     left: 0;
     width: 100%;
     z-index: -1;
@@ -246,6 +246,12 @@ section {
 
 
 // -------------------------- Media --------------------------
+
+@media (max-width: 1920px) {
+    .hero-background {
+        top: 14vw;
+    }
+}
 
 @media (max-width: 1024px) {
     section {
@@ -323,9 +329,20 @@ section {
             }
         }
     }
+
+    .hero-background {
+        top: 16vw;
+    }
 }
 
 @media (max-width: 680px) {
+
+    .hero-background {
+        bottom: 0;
+        top: 18%;
+        height: 500px;
+    }
+
     section {
         button {
             font-size: 16px;
@@ -368,6 +385,21 @@ section {
             display: none;
         }
     }
+}
 
+@media (max-height: 680px) {
+    section {
+        .container {
+            .photo-container {
+                .photo {
+                    min-width: 150px;
+                }
+            }
+        }
+    }
 
+    .hero-background {
+        height: auto;
+        top: 16%
+    }
 }

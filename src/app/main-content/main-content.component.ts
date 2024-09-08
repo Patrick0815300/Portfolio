@@ -7,6 +7,7 @@ import { ContactformComponent } from './contactform/contactform.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../shared/header/header.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main-content',
@@ -19,7 +20,8 @@ import { HeaderComponent } from '../shared/header/header.component';
     ContactformComponent,
     TranslateModule,
     CommonModule,
-    HeaderComponent
+    HeaderComponent,
+    RouterModule
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
@@ -59,6 +61,4 @@ export class MainContentComponent {
       this.elementVisibility[key] = 'hidden';
     }
   }
-
-
 }

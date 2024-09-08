@@ -1,11 +1,11 @@
 <section>
-    <a href="#aboveTheFold">
+    <a (click)="onSectionClick('abovethefold')">
         <img src="../../../assets/img/general/logo.png" alt="Logo">
     </a>
     <div class="links">
-      <a href="#aboutme" [class.active]="currentSection === 'aboutme'">{{ 'HEADER_ABOUT_ME' | translate }}</a>
-      <a href="#skills" [class.active]="currentSection === 'skills'">{{ 'HEADER_SKILLS' | translate }}</a>
-      <a href="#portfolio" [class.active]="currentSection === 'portfolio'">{{ 'HEADER_PORTFOLIO' | translate }}</a>
+      <a (click)="onSectionClick('aboutme')" [class.active]="currentSection === 'aboutme'">{{ 'HEADER_ABOUT_ME' | translate }}</a>
+      <a (click)="onSectionClick('skills')" [class.active]="currentSection === 'skills'">{{ 'HEADER_SKILLS' | translate }}</a>
+      <a (click)="onSectionClick('portfolio')" [class.active]="currentSection === 'portfolio'">{{ 'HEADER_PORTFOLIO' | translate }}</a>
       <div class="lang-container">
         <span class="lang" [class.active]="isActiveLang('de')" (click)="switchLanguage('de')">de</span>
         <span>|</span>
@@ -21,10 +21,10 @@
 </section>
 <div class="overlay" [ngClass]="{'active': menuOpen}">
   <div class="container">
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('aboutme')">{{ 'HEADER_ABOUT_ME' | translate }}</a>
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('skills')">{{ 'HEADER_SKILLS' | translate }}</a>
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('portfolio')">{{ 'HEADER_SKILLS' | translate }}</a>
-    <a href="javascript:void(0)" (click)="toggleMenuWithDelay('contact')">{{ 'CONTACT_TITLE' | translate }}</a>
+    <a (click)="onSectionClick('aboutme')" (click)="toggleMenuWithDelay('aboutme')">{{ 'HEADER_ABOUT_ME' | translate }}</a>
+    <a (click)="onSectionClick('skills')" (click)="toggleMenuWithDelay('skills')">{{ 'HEADER_SKILLS' | translate }}</a>
+    <a (click)="onSectionClick('portfolio')" (click)="toggleMenuWithDelay('portfolio')">{{ 'HEADER_PORTFOLIO' | translate }}</a>
+    <a (click)="onSectionClick('contact')" (click)="toggleMenuWithDelay('contact')">{{ 'CONTACT_TITLE' | translate }}</a>
     <div class="lang-container">
       <span class="lang" [class.active]="isActiveLang('de')" (click)="switchLanguage('de')">de</span>
       <span>|</span>

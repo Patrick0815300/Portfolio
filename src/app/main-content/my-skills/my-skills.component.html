@@ -8,7 +8,7 @@
   </div>
 
   <div class="icon-container">
-    <div *ngFor="let skill of skills; let i = index" appScrollAnimation [delay]="200 + i * 70" class="icon-item" [ngClass]="{ 'learning': skill.isSvg }">
+    <div *ngFor="let skill of skills" class="icon-item" appScrollAnimation [delay]="200" [ngClass]="{ 'learning': skill.isSvg }">
       <ng-container *ngIf="!skill.isSvg">
         <img [src]="skill.src" [alt]="skill.alt">
       </ng-container>
@@ -40,6 +40,6 @@
     <span class="experience">{{ 'MY_SKILLS_EXPERIENCE' | translate }}</span>
     <span class="big-font">{{ 'MY_SKILLS_BIG_FONT' | translate }}</span>
     <span>{{ 'MY_SKILLS_CONTACT_PROMPT' | translate }}</span>
-    <a href="#contact"><button>{{ 'CONTACT_BUTTON' | translate }}</button></a>
+    <a (click)="onSectionClick('contact')"><button>{{ 'CONTACT_BUTTON' | translate }}</button></a>
   </div>
 </section>

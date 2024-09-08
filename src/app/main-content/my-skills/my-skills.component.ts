@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 import { TranslateModule } from '@ngx-translate/core';
+import { ScrollService } from '../../shared/services/scroll.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -26,4 +27,9 @@ export class MySkillsComponent {
   ];
 
   @Input() visibility: string = 'hidden';
+
+  constructor(private scrollService: ScrollService) { }
+  onSectionClick(sectionId: string) {
+    this.scrollService.scrollToSection(sectionId);
+  }
 }

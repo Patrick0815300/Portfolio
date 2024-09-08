@@ -2,6 +2,7 @@
 
 a {
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 section {
@@ -14,8 +15,9 @@ section {
     align-items: center;
     background-color: $background-color;
     z-index: 1000;
-    max-width: 1920px;
+    max-width: 1440px;
     box-sizing: border-box;
+    margin: auto;
 
 
     img {
@@ -42,6 +44,7 @@ section {
         a {
             position: relative;
             display: inline-block;
+            cursor: pointer;
 
             &:hover {
                 animation-timing-function: linear;
@@ -227,8 +230,8 @@ section {
         }
 
         a {
-            margin-top: 37px;
-            margin-bottom: 37px;
+            margin-top: 34px;
+            margin-bottom: 34px;
             display: flex;
             align-items: center;
         }

@@ -32,5 +32,7 @@
     "CONTACT_PRIVACY_LINK": "privacy policy",
     "CONTACT_PRIVACY_ERROR": "Please accept the privacy policy",
     "CONTACT_SUBMIT": "Send message",
-    "CONTACT_SUBMIT_MESSAGE": "Thank you for submitting!"
+    "CONTACT_SUBMIT_MESSAGE": "Thank you for submitting!",
+    "PRIVACY_IMPRINT": "Imprint",
+    "PRIVACY_POLICY": "Privacy Policy"
 }

@@ -10,14 +10,22 @@ section {
     left: 0;
     right: 0;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     background-color: $background-color;
     z-index: 1000;
-    max-width: 1440px;
     box-sizing: border-box;
-    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+
+    .max-width {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+    }
 
 
     img {

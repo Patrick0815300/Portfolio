@@ -1,5 +1,6 @@
 <section>
-    <a [routerLink]="['/']" fragment="abovethefold">
+    <div class="max-width">
+      <a [routerLink]="['/']" fragment="abovethefold">
         <img src="../../../assets/img/general/logo.png" alt="Logo">
     </a>
     <div class="links">
@@ -18,13 +19,15 @@
         <div class="mid lane"></div>
         <div class="last lane"></div>
     </div>
+  </div>
+    
 </section>
 <div class="overlay" [ngClass]="{'active': menuOpen}">
   <div class="container">
-    <a (click)="onSectionClick('aboutme')" (click)="toggleMenuWithDelay('aboutme')">{{ 'HEADER_ABOUT_ME' | translate }}</a>
-    <a (click)="onSectionClick('skills')" (click)="toggleMenuWithDelay('skills')">{{ 'HEADER_SKILLS' | translate }}</a>
-    <a (click)="onSectionClick('portfolio')" (click)="toggleMenuWithDelay('portfolio')">{{ 'HEADER_PORTFOLIO' | translate }}</a>
-    <a (click)="onSectionClick('contact')" (click)="toggleMenuWithDelay('contact')">{{ 'CONTACT_TITLE' | translate }}</a>
+    <a [routerLink]="['/']" fragment="aboutme" (click)="toggleMenuWithDelay('aboutme')">{{ 'HEADER_ABOUT_ME' | translate }}</a>
+    <a [routerLink]="['/']" fragment="skills" (click)="toggleMenuWithDelay('skills')">{{ 'HEADER_SKILLS' | translate }}</a>
+    <a [routerLink]="['/']" fragment="portfolio" (click)="toggleMenuWithDelay('portfolio')">{{ 'HEADER_PORTFOLIO' | translate }}</a>
+    <a [routerLink]="['/']" fragment="contact" (click)="toggleMenuWithDelay('contact')">{{ 'CONTACT_TITLE' | translate }}</a>
     <div class="lang-container">
       <span class="lang" [class.active]="isActiveLang('de')" (click)="switchLanguage('de')">de</span>
       <span>|</span>

@@ -32,5 +32,7 @@
     "CONTACT_PRIVACY_LINK": "Datenschutzrichtlinie",
     "CONTACT_PRIVACY_ERROR": "Bitte akzeptieren Sie die Datenschutzrichtlinie",
     "CONTACT_SUBMIT": "Nachricht senden",
-    "CONTACT_SUBMIT_MESSAGE": "Vielen Dank für Ihre Nachricht!"
+    "CONTACT_SUBMIT_MESSAGE": "Vielen Dank für Ihre Nachricht!",
+    "PRIVACY_IMPRINT": "Impressum",
+    "PRIVACY_POLICY": "Datenschutzerklärung"
 }

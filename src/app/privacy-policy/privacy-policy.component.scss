@@ -2,16 +2,17 @@
 
 section {
     margin-top: 101px;
-    margin-left: 100px;
-    margin-right: 100px;
-    max-width: 1920px;
+    max-width: 1440px;
 
     h1 {
         font-size: 32px;
     }
 
-    .imprint {
+    .imprint,
+    .privacy {
         margin-bottom: 64px;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 
     a {
@@ -21,10 +22,25 @@ section {
 
 // -------------------- Media --------------------
 
+@media (max-width: 1024px) {
+    section {
+
+        .imprint,
+        .privacy {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     section {
         margin-top: 110px;
-        margin-left: 25px;
-        margin-right: 25px;
+
+        .imprint,
+        .privacy {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
     }
 }

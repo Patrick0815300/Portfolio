@@ -75,7 +75,7 @@ export class ContactformComponent {
     }, 3000);
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://patrick-nigrin.de/sendMail.php',
@@ -93,7 +93,7 @@ export class ContactformComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            this.openDialog();
             ngForm.resetForm();
           },
           error: (error) => {
@@ -102,7 +102,6 @@ export class ContactformComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.openDialog();
       ngForm.resetForm();
     }
   }

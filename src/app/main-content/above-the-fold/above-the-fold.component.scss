@@ -7,9 +7,8 @@ section {
     justify-content: space-between;
     width: 100%;
     color: white;
-    max-width: 1920px;
+    max-width: 1440px;
     margin-top: 100px;
-    height: calc(100vh - 108px) !important;
 
     .container {
         display: flex;
@@ -19,6 +18,7 @@ section {
 
         .photo-container {
             position: relative;
+            min-width: 40%;
 
             img {
                 width: 50vw;
@@ -119,6 +119,7 @@ section {
         transform: rotate(-90deg);
         transform-origin: center;
         white-space: nowrap;
+        font-size: 60px;
     }
 
     div {
@@ -127,6 +128,7 @@ section {
 
     .headlines-container {
         padding-bottom: 44px;
+        white-space: nowrap;
 
         div {
             height: 100%;
@@ -146,6 +148,7 @@ section {
     justify-content: space-between;
     margin-top: 90px;
     margin-right: 100px;
+    white-space: nowrap;
 
     .media {
         display: flex;
@@ -209,6 +212,7 @@ section {
         rotate: 90deg;
         transform-origin: top right;
         animation: bounce 2s infinite;
+        white-space: nowrap;
 
         img {
             width: 16px;
@@ -253,27 +257,64 @@ section {
     }
 }
 
+@media (max-width: 1440px) {
+    section {
+        height: calc(100vh - 108px) !important;
+    }
+
+    .iam {
+        h1 {
+            font-size: 5.5vw;
+        }
+
+        h2 {
+            font-size: 3.5vw;
+        }
+    }
+}
+
 @media (max-width: 1024px) {
     section {
         .container {
-            margin-right: 50px;
-            margin-left: 50px;
+            margin-right: 25px;
+            margin-left: 25px;
+            flex-direction: column;
+            align-items: center;
+
+            .photo-container {
+                min-width: auto;
+
+                img {
+                    width: 30vw;
+                }
+            }
         }
 
         .social-container {
-            margin-right: 50px;
+            margin-right: 25px;
+            margin-top: 6px;
         }
+
+
     }
 
+    .iam {
+        h1 {
+            font-size: 7vw;
+        }
+
+        h2 {
+            font-size: 4.5vw;
+        }
+
+        .rotate {
+            font-size: 6vw;
+        }
+    }
 
 }
 
 @media (max-width: 990px) {
-    .iam {
-        .rotate {
-            font-size: 42px;
-        }
-    }
 
     .headlines {
         h1 {
@@ -289,8 +330,6 @@ section {
 @media (max-width: 768px) {
     section {
         .container {
-            flex-direction: column;
-            align-items: center;
             margin-left: 25px;
             margin-right: 25px;
 
@@ -401,5 +440,23 @@ section {
     .hero-background {
         height: auto;
         top: 16%
+    }
+}
+
+@media (max-width: 410px) {
+    .headlines {
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+    }
+
+    .iam {
+        .rotate {
+            font-size: 26px;
+        }
     }
 }

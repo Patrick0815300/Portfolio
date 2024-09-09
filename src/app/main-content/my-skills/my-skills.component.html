@@ -1,5 +1,5 @@
 <section>
-  <div appScrollAnimation [delay]="200" class="mobile">
+  <div appScrollAnimation [delay]="100" class="mobile">
     <div>
       <h1>{{ 'MY_SKILLS_TITLE' | translate }}</h1>
       <div class="line"></div>
@@ -8,7 +8,7 @@
   </div>
 
   <div class="icon-container">
-    <div *ngFor="let skill of skills" class="icon-item" appScrollAnimation [delay]="200" [ngClass]="{ 'learning': skill.isSvg }">
+    <div *ngFor="let skill of skills" class="icon-item" appScrollAnimation [delay]="250" [ngClass]="{ 'learning': skill.isSvg }">
       <ng-container *ngIf="!skill.isSvg">
         <img [src]="skill.src" [alt]="skill.alt">
       </ng-container>
@@ -32,7 +32,7 @@
     </div>
   </div>
 
-  <div appScrollAnimation [delay]="200" class="skill-container">
+  <div appScrollAnimation [delay]="100" class="skill-container">
     <div>
       <h1>{{ 'MY_SKILLS_TITLE' | translate }}</h1>
       <div class="line"></div>

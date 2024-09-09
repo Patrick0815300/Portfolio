@@ -1,7 +1,7 @@
 <section>
     <div class="privacy">
         <a href=""><img src="../../../assets/img/general/logo.png" alt="Logo"></a>
-        <a class="imprint" href="privacy">Privacy Policy</a>
+        <a [routerLink]="['privacy']" (click)="onSectionClick('privacy')" class="imprint">Privacy Policy</a>
     </div>
     <div>
         <span>© Patrick Nigrin 2024</span>

@@ -271,6 +271,10 @@ section {
             font-size: 3.5vw;
         }
     }
+
+    .hero-background {
+        top: 24vw;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -310,6 +314,10 @@ section {
         .rotate {
             font-size: 6vw;
         }
+    }
+
+    .hero-background {
+        top: 26vw;
     }
 
 }
@@ -370,7 +378,7 @@ section {
     }
 
     .hero-background {
-        top: 16vw;
+        top: 29vw;
     }
 }
 
@@ -378,7 +386,7 @@ section {
 
     .hero-background {
         bottom: 0;
-        top: 18%;
+        top: 23%;
         height: 500px;
     }
 
@@ -439,7 +447,7 @@ section {
 
     .hero-background {
         height: auto;
-        top: 16%
+        top: 31%
     }
 }
 

@@ -7,13 +7,13 @@
         
         <div class="iam animation">
             <div class="headlines-container">
-                <div class="rotate-container"><span class="rotate">I am</span></div>
+                <div class="rotate-container"><span class="rotate">{{ 'I_AM' | translate }}</span></div>
                 <div class="headlines">
                     <h1><b>Patrick Nigrin</b></h1>
-                    <h2>FRONTEND DEVELOPER</h2>
+                    <h2>{{ 'FRONTEND_DEV' | translate }}</h2>
                 </div>
             </div>
-            <a (click)="onSectionClick('contact')"><button>Let's talk!</button></a>
+            <a (click)="onSectionClick('contact')"><button>{{ 'LETS_TALK' | translate }}</button></a>
             
         </div>
     </div>

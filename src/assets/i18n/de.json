@@ -1,4 +1,7 @@
 {
+    "I_AM": "Ich bin",
+    "FRONTEND_DEV": "FRONTEND ENTWICKLER",
+    "LETS_TALK": "Los geht's",
     "HEADER_ABOUT_ME": "Über mich",
     "HEADER_SKILLS": "Fähigkeiten",
     "HEADER_PORTFOLIO": "Portfolio",
@@ -15,6 +18,7 @@
     "MY_SKILLS_CONTACT_PROMPT": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
     "CONTACT_BUTTON": "Kontaktieren",
     "PORTFOLIO_INTRO": "Entdecke eine Auswahl meiner Arbeiten hier – Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "DABUBBLE_DESCRIPTION": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Nachrichtenübermittlung und einer leistungsstarken Kanalorganisation.",
     "JOIN_DESCRIPTION": "Taskmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
     "EL_POLLO_DESCRIPTION": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pollo, Münzen und Flaschen zu finden, um gegen das Killer-Huhn zu kämpfen.",
     "CONTACT_TITLE": "Kontakt",

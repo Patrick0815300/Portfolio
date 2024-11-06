@@ -14,6 +14,15 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent {
   projects = [
     {
+      imageSrc: '../../../assets/img/portfolio/dabubble.png',
+      altText: 'DABubble',
+      projectName: 'DA Bubble',
+      languages: 'Angular | TypeScript | Firebase',
+      description: 'DABUBBLE_DESCRIPTION',
+      liveTestLink: '#',
+      githubLink: '#'
+    },
+    {
       imageSrc: '../../../assets/img/portfolio/join.png',
       altText: 'Join',
       projectName: 'Join',
@@ -31,14 +40,5 @@ export class PortfolioComponent {
       liveTestLink: 'https://epl.patrick-nigrin.de',
       githubLink: 'https://github.com/Patrick0815300/El-Pollo-Loco'
     },
-    /* {
-      imageSrc: '../../../assets/img/portfolio/dabubble.png',
-      altText: 'DABubble',
-      projectName: 'DA Bubble',
-      languages: 'Angular | TypeScript | Firebase',
-      description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-      liveTestLink: '#',
-      githubLink: '#'
-    } */
   ];
 }

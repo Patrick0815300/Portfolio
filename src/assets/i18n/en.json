@@ -1,4 +1,7 @@
 {
+    "I_AM": "I am",
+    "FRONTEND_DEV": "FRONTEND DEVELOPER",
+    "LETS_TALK": "Let's Talk",
     "HEADER_ABOUT_ME": "About me",
     "HEADER_SKILLS": "Skills",
     "HEADER_PORTFOLIO": "Portfolio",
@@ -15,6 +18,7 @@
     "MY_SKILLS_CONTACT_PROMPT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
     "CONTACT_BUTTON": "Get in touch",
     "PORTFOLIO_INTRO": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "DABUBBLE_DESCRIPTION": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
     "JOIN_DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "EL_POLLO_DESCRIPTION": "A simple Jump-and-Run game based on an object-oriented approach. Help Pollo to find coins and bottles to fight against the killer Chicken.",
     "CONTACT_TITLE": "Contact",

@@ -266,7 +266,7 @@ section {
 
 @media (max-width: 1440px) {
     section {
-        height: calc(100vh - 108px) !important;
+        height: calc(98vh - 108px) !important;
     }
 
     .iam {
@@ -291,13 +291,21 @@ section {
             margin-left: 25px;
             flex-direction: column;
             align-items: center;
+            flex: 1;
 
             .photo-container {
-                min-width: auto;
+                width: 90vw;
+                text-align: center;
                 max-height: 400px;
 
-                img {
-                    width: 30vw;
+                .photo {
+                    width: 41vw;
+                }
+
+                .shadow {
+                    width: 50vw;
+                    left: 140px;
+                    bottom: unset;
                 }
             }
         }
@@ -306,11 +314,11 @@ section {
             margin-right: 25px;
             margin-top: 6px;
         }
-
-
     }
 
     .iam {
+        flex: 1;
+
         h1 {
             font-size: 7vw;
         }
@@ -329,12 +337,17 @@ section {
     }
 
     .hero-background {
-        top: 26vw;
+        top: 32vw;
     }
 
 }
 
 @media (max-width: 990px) {
+    section {
+        .container {
+            flex: 1;
+        }
+    }
 
     .headlines {
         h1 {
@@ -347,26 +360,18 @@ section {
     }
 }
 
+@media (max-width: 844px) {
+    .hero-background {
+        top: 43vw;
+    }
+}
+
+
 @media (max-width: 768px) {
     section {
         .container {
             margin-left: 25px;
             margin-right: 25px;
-            flex: 1;
-
-            .photo-container {
-                width: 90vw;
-                text-align: center;
-
-                .photo {
-                    width: 41vw;
-                }
-
-                .shadow {
-                    width: 50vw;
-                    left: 140px;
-                }
-            }
         }
 
         h1 {
@@ -401,7 +406,7 @@ section {
     }
 
     .hero-background {
-        top: 37vw;
+        top: 50vw;
     }
 }
 
@@ -422,6 +427,7 @@ section {
             .photo-container {
                 .photo {
                     min-width: 250px;
+                    width: 58vw;
                 }
             }
         }
@@ -453,23 +459,6 @@ section {
         .scroll-down {
             display: none;
         }
-    }
-}
-
-@media (max-height: 680px) {
-    section {
-        .container {
-            .photo-container {
-                .photo {
-                    min-width: 200px;
-                }
-            }
-        }
-    }
-
-    .hero-background {
-        height: auto;
-        top: 31%
     }
 }
 
@@ -536,5 +525,36 @@ section {
 @media (max-width: 390px) {
     .hero-background {
         top: 48%;
+    }
+}
+
+@media (max-height: 680px) {
+    section {
+        .container {
+            .photo-container {
+                max-height: 300px;
+
+                .photo {
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+
+    .hero-background {
+        height: auto;
+        top: 43%
+    }
+}
+
+@media (max-height: 640px) {
+    .hero-background {
+        top: 48%
+    }
+}
+
+@media (max-height: 600px) {
+    .hero-background {
+        top: 60%
     }
 }

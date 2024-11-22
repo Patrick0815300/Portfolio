@@ -27,6 +27,13 @@ body {
     overflow-x: hidden !important;
 }
 
+mat-icon {
+    font-family: 'Material Icons' !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a {
     text-decoration: none;
 }
@@ -245,6 +252,16 @@ a {
 
 .fontPoppins {
     font-family: 'Poppins';
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 html,

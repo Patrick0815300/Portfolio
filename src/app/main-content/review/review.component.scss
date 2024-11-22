@@ -1,0 +1,274 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 108px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    padding: 10px;
+
+    mat-icon {
+        font-size: 40px;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+.btn-left {
+    position: absolute;
+    left: -20px;
+}
+
+.btn-right {
+    position: absolute;
+    right: -20px;
+}
+
+.container {
+    border: 1px solid #9747FF;
+    padding: 25px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 0 10px;
+    height: 200px;
+    display: flex;
+    width: 450px;
+
+    &.left {
+        transform: scale(0.8);
+        opacity: 0.5;
+        margin-right: -70px;
+        width: 220px;
+        justify-content: center;
+    }
+
+    &.center {
+        transform: scale(1);
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        animation: 350ms flyInFromLeft ease-in;
+    }
+
+    &.right {
+        transform: scale(0.8);
+        opacity: 0.5;
+        margin-left: -70px;
+        width: 220px;
+        justify-content: center;
+    }
+
+    &:hover {
+        border-color: #70E61C;
+    }
+}
+
+.author-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 40%;
+    width: 40%;
+    margin-inline: 21px;
+}
+
+.full-width {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.author {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.line {
+    border: 0.5px solid white;
+    opacity: 0.3;
+    margin: 16px 0;
+}
+
+.quote {
+    position: absolute;
+    left: 10px;
+    top: 28px;
+    font-size: 120px;
+    font-style: oblique;
+}
+
+.review-text {
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-width: 60%;
+}
+
+.review-text-mobile {
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-height: 100%;
+}
+
+.counter-points {
+    display: flex;
+    gap: 6px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.point {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #9747FF;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &.active {
+        border-color: #70E61C;
+    }
+}
+
+.headline {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+
+    h1 {
+        margin-inline: 32px;
+    }
+
+    div {
+        border: 2px solid #9747FF;
+        width: 10%;
+    }
+}
+
+.touch-icon {
+    display: none;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+
+
+@keyframes flyInFromLeft {
+    from {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 990px) {
+
+    .left,
+    .right {
+        display: none;
+    }
+
+    .btn-left {
+        left: -40px;
+    }
+
+    .btn-right {
+        right: -40px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 70vw;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-text {
+        display: none;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .author-container {
+        width: unset;
+        max-width: unset;
+    }
+
+    .touch-icon {
+        display: block;
+        animation: pulse 1.5s infinite ease-in-out;
+    }
+}
+
+@media (max-width: 510px) {
+    .btn-right {
+        right: 5px;
+        bottom: -60px;
+    }
+
+    .btn-left {
+        left: 5px;
+        bottom: -60px;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

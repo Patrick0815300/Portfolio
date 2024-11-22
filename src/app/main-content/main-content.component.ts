@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../shared/header/header.component';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ReviewComponent } from "./review/review.component";
 
 @Component({
   selector: 'app-main-content',
@@ -22,7 +23,8 @@ import { filter } from 'rxjs/operators';
     TranslateModule,
     CommonModule,
     HeaderComponent,
-    RouterModule
+    RouterModule,
+    ReviewComponent
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

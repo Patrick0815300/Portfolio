@@ -1,8 +1,19 @@
 <section>
-    <div class="container">
-        <div class="photo-container">
-            <img class="photo animation" src="../../../assets/img/general/example1.png" alt="Patrick1">
-            <img class="shadow" src="../../../assets/img/background/29. photo_shadows.png" alt="Photo-Shadow">
+    <div class="container" >
+        <div class="photo-container" *ngFor="let image of images; let i = index">
+            <div *ngIf="!isImageLoaded[i]" class="loader">Lädt...</div>
+            <img class="photo animation"
+            [src]="image.expample1"
+            (load)="onImageLoad(i)" 
+            (error)="onImageError(i)"
+            [hidden]="!isImageLoaded[i]"
+            >
+            <img class="shadow" 
+            [src]="image.shadow"
+            (load)="onImageLoad(i)" 
+            (error)="onImageError(i)"
+            [hidden]="!isImageLoaded[i]"
+            >
         </div>
         
         <div class="iam animation">

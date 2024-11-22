@@ -12,4 +12,21 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutMeComponent {
   @Input() visibility: string = 'hidden';
+  images = [
+    {
+      example2: '../../../assets/img/general/example2.png',
+      shadow: '../../../assets/img/background/30. purple_shadow_about_me.png',
+    }
+  ]
+
+  isImageLoaded: boolean[] = Array(this.images.length).fill(false);
+
+  onImageLoad(index: number) {
+    this.isImageLoaded[index] = true;
+  }
+
+  onImageError(index: number) {
+    this.isImageLoaded[index] = false;
+  }
+
 }

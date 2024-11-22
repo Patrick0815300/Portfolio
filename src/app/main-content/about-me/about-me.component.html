@@ -1,4 +1,4 @@
-<section>
+<section *ngFor="let image of images; let i = index">
     <div class="about-me-container">
          <h1 appScrollAnimation [delay]="100">{{ 'ABOUT_ME_TITLE' | translate }}</h1>
          <span appScrollAnimation [delay]="150">{{ 'ABOUT_ME_INTRO' | translate }}</span>
@@ -16,10 +16,14 @@
          </div>
      </div>
      <div class="photo-container">
-         <img appScrollAnimation [delay]="100"  class="photo" src="../../../assets/img/general/example2.png" alt="Patrick2">
+         <img appScrollAnimation [delay]="100"  class="photo" 
+         [src]="image.example2" alt="Patrick2"
+         (load)="onImageLoad(i)" 
+        (error)="onImageError(i)"
+         >
          <div appScrollAnimation [delay]="100"  class="line"></div>
      </div>
 </section>
-<div class="overflow-wrapper">
-    <img class="shadow" src="../../../assets/img/background/30. purple_shadow_about_me.png" alt="purple_shadow_about_me">
+<div class="overflow-wrapper" *ngFor="let image of images">
+    <img class="shadow" [src]="image.shadow" alt="purple_shadow_about_me">
 </div>

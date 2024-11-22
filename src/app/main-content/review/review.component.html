@@ -1,0 +1,45 @@
+<section>
+    <div class="headline">
+        <div></div>
+        <h1>Reviews</h1>
+        <div></div>
+    </div>
+    <div class="carousel">
+      <div 
+        class="container" 
+        *ngFor="let review of displayedReviews" 
+        [ngClass]="review.position"
+        (click)="toggleCard()"
+       >
+        <span class="quote" *ngIf="review.position === 'center'">"</span>
+        <span class="review-text" *ngIf="review.position === 'center'">{{ review.text }}</span>
+        <span class="review-text-mobile" *ngIf="review.position === 'center' && !isAuthorVisible">{{ review.text }}</span>
+        <div class="line" *ngIf="review.position === 'center'"></div>
+        <div 
+            class="author-container" 
+            *ngIf="isAuthorVisible"
+            [ngClass]="{ 'full-width': review.position !== 'center' }"
+          >
+          <span class="author">{{ review.author }}</span>
+          <span class="project">{{ review.project }}</span>
+        </div>
+        <mat-icon class="touch-icon">touch_app</mat-icon>
+      </div>
+      <button class="btn-left" (click)="prev()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button class="btn-right" (click)="next()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+    <div class="counter-points" >
+        <div 
+            class="point" 
+            *ngFor="let review of reviews; let i = index" 
+            [ngClass]="{ 'active': i === currentIndex }" 
+            (click)="goToIndex(i)"
+            ><span></span>
+        </div>
+    </div>
+  </section>
+  

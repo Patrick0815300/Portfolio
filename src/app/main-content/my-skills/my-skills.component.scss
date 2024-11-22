@@ -204,6 +204,11 @@ section {
 
         button {
             margin-right: 50px;
+
+            &:hover {
+                margin-left: unset;
+                margin-right: 50px;
+            }
         }
     }
 }
@@ -246,6 +251,11 @@ section {
         button {
             font-size: 16px;
             margin-right: 0;
+            margin-bottom: 12px;
+
+            &:hover {
+                margin-right: 0;
+            }
         }
     }
 

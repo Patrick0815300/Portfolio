@@ -19,8 +19,8 @@ export class PortfolioComponent {
       projectName: 'DA Bubble',
       languages: 'Angular | TypeScript | Firebase',
       description: 'DABUBBLE_DESCRIPTION',
-      liveTestLink: '#',
-      githubLink: '#'
+      liveTestLink: 'https://dab.patrick-nigrin.de',
+      githubLink: 'https://github.com/Patrick0815300/DABubble'
     },
     {
       imageSrc: '../../../assets/img/portfolio/join.png',

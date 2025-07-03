@@ -15,29 +15,42 @@ export class PortfolioComponent {
   projects = [
     {
       imageSrc: '../../../assets/img/portfolio/dabubble.png',
+      altText: 'HRM',
+      projectName: 'HRM-System',
+      status: 'in Progress',
+      languages: 'Angular | TypeScript | Supabase',
+      description: 'DABUBBLE_DESCRIPTION',
+      liveTestLink: 'https://hrm.patrick-nigrin.dev',
+      githubLink: 'https://github.com/Patrick0815300/HRM'
+    },
+    {
+      imageSrc: '../../../assets/img/portfolio/dabubble.png',
       altText: 'DABubble',
       projectName: 'DA Bubble',
+      status: 'Live',
       languages: 'Angular | TypeScript | Firebase',
       description: 'DABUBBLE_DESCRIPTION',
-      liveTestLink: 'https://dab.patrick-nigrin.de',
+      liveTestLink: 'https://dab.patrick-nigrin.dev',
       githubLink: 'https://github.com/Patrick0815300/DABubble'
     },
     {
       imageSrc: '../../../assets/img/portfolio/join.png',
       altText: 'Join',
       projectName: 'Join',
+      status: 'Live',
       languages: 'JavaScript | HTML | CSS | Firebase',
       description: 'JOIN_DESCRIPTION',
-      liveTestLink: 'https://join.patrick-nigrin.de',
+      liveTestLink: 'https://join.patrick-nigrin.dev',
       githubLink: 'https://github.com/Patrick0815300/JOIN'
     },
     {
       imageSrc: '../../../assets/img/portfolio/el_pollo_loco.png',
       altText: 'el_pollo_loco',
       projectName: 'El Pollo Loco',
+      status: 'Live',
       languages: 'JavaScript | HTML | CSS',
       description: 'EL_POLLO_DESCRIPTION',
-      liveTestLink: 'https://epl.patrick-nigrin.de',
+      liveTestLink: 'https://epl.patrick-nigrin.dev',
       githubLink: 'https://github.com/Patrick0815300/El-Pollo-Loco'
     },
   ];

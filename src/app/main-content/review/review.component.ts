@@ -24,18 +24,18 @@ interface DisplayedReview extends Review {
 export class ReviewComponent {
   reviews = [
     {
-      author: 'Diana Grillmeier',
-      text: 'döfjpodömföoeovnlönvöd ldfnödlmvöphjrpofhs',
-      project: 'ProComp GmbH - Imple-mentierung eines Ticketsystems'
+      author: 'D.Grillmeier',
+      text: '',
+      project: 'ProComp GmbH - Implementierung eines Ticketsystems als Projektleiter'
     },
     {
-      author: 'Tobias Reize',
+      author: 'T.Reize',
       text: '"Die Zusammenarbeit und Kommunikation mit Patrick verlief stets reibungslos. Er arbeitet gewissenhaft und achtet dabei auch auf Details. Durch sein Engagement hat er einen wesentlichen Beitrag zu unserem Teamerfolg beigetragen. Ich kann die Zusammenarbeit mit Patrick weiterempfehlen."',
       project: 'JOIN - Business Kanban Board',
     },
     {
-      author: 'DABubble',
-      text: 'döfjpodömföoeovnlönvöd ldfnödlmvöphjrpofhs',
+      author: 'J.Quabeck',
+      text: 'Die Zusammenarbeit mit Patrick war stets angenehm und unkompliziert. Besonders schätzte ich die klare Kommunikation und Zuverlässigkeit bei Fristen. Er unterstützte das Team jederzeit tatkräftig. Solche Kollegen wünscht man sich!',
       project: 'DABubble - Messaging App in der Art von Slack oder Discord',
     },
   ]

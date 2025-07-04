@@ -78,7 +78,7 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://patrick-nigrin.de/sendMail.php',
+    endPoint: 'https://patrick-nigrin.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

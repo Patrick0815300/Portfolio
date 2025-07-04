@@ -23,6 +23,7 @@ export class MySkillsComponent {
     { src: '../../../assets/img/skills/api.png', alt: 'api', name: 'Rest-Api' },
     { src: '../../../assets/img/skills/scrum.png', alt: 'scrum', name: 'Scrum' },
     { src: '../../../assets/img/skills/material_design.png', alt: 'material_design', name: 'Material Design' },
+    { src: '../../../assets/img/skills/supabase-logo-icon.png', alt: 'supabase', name: 'Supabase' },
     { src: '../../../assets/img/skills/learning_white.svg', alt: 'learning', name: 'Continually Learning', isSvg: true }
   ];
 

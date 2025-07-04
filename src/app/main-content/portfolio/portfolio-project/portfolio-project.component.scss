@@ -59,6 +59,37 @@ a {
         color: $primary2-color;
     }
 
+    .header-description {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .status-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 99999px;
+            background-color: red;
+            box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .status-online {
+            background-color: #4caf50;
+        }
+
+        .status-offline {
+            background-color: #f44336;
+        }
+
+        .status-in-progress {
+            background-color: #ff9800;
+        }
+
+    }
+
+    .reverse-row {
+        flex-direction: row-reverse;
+    }
+
     .languages {
         font-size: 23px;
         line-height: 27.6px;

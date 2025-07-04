@@ -14,6 +14,7 @@ export class PortfolioProjectComponent {
   @Input() imageSrc: string = '';
   @Input() altText: string = '';
   @Input() projectName: string = '';
+  @Input() status: string = '';
   @Input() languages: string = '';
   @Input() description: string = '';
   @Input() liveTestLink: string = '';

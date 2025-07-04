@@ -24,17 +24,17 @@ interface DisplayedReview extends Review {
 export class ReviewComponent {
   reviews = [
     {
-      author: 'D.Grillmeier',
-      text: '',
+      author: 'Diana Grillmeier',
+      text: 'Herr Nigrin überzeugte durch seine exzellenten Fachkenntnisse, seine strukturierte Arbeitsweise und sein außergewöhnliches Engagement. Besonders hervorzuheben sind seine Beiträge in der Frontend-Entwicklung und bei der Einführung innovativer Prozesse, die unsere Projekte maßgeblich vorangebracht haben. Seine Teamfähigkeit, Kommunikationsstärke und Professionalität machten die Zusammenarbeit jederzeit sehr angenehm.',
       project: 'ProComp GmbH - Implementierung eines Ticketsystems als Projektleiter'
     },
     {
-      author: 'T.Reize',
+      author: 'Tobias Reize',
       text: '"Die Zusammenarbeit und Kommunikation mit Patrick verlief stets reibungslos. Er arbeitet gewissenhaft und achtet dabei auch auf Details. Durch sein Engagement hat er einen wesentlichen Beitrag zu unserem Teamerfolg beigetragen. Ich kann die Zusammenarbeit mit Patrick weiterempfehlen."',
       project: 'JOIN - Business Kanban Board',
     },
     {
-      author: 'J.Quabeck',
+      author: 'Julien Quabeck',
       text: 'Die Zusammenarbeit mit Patrick war stets angenehm und unkompliziert. Besonders schätzte ich die klare Kommunikation und Zuverlässigkeit bei Fristen. Er unterstützte das Team jederzeit tatkräftig. Solche Kollegen wünscht man sich!',
       project: 'DABubble - Messaging App in der Art von Slack oder Discord',
     },

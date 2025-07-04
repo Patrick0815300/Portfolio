@@ -3,7 +3,16 @@
         <img [src]="imageSrc" [alt]="altText">
     </div>
     <div class="description">
-        <span class="project">{{ projectName }}</span>
+        <div class="header-description" [ngClass]="{ 'reverse-row': reverse }">
+          <span class="project">{{ projectName }}</span>
+          <div class="status-btn" [ngClass]="{
+            'status-online': status === 'online',
+            'status-offline': status === 'offline',
+            'status-in-progress': status === 'in-progress'
+            }"></div>
+
+        </div>
+        
         <span class="languages">{{ languages }}</span>
         <span>{{ description | translate }}</span>
         <div class="buttons">

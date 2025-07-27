@@ -25,14 +25,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class AppComponent {
 
   title = 'portfolio';
-  currentLang = 'en';
+  currentLang = 'de';
   currentSection: string = '';
 
   constructor(public translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-
-    this.translate.use('en');
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
+    this.translate.setDefaultLang('de');
   }
 
   switchLanguage(lang: string) {

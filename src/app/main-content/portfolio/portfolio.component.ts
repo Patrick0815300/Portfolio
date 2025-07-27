@@ -14,16 +14,6 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent {
   projects = [
     {
-      imageSrc: '../../../assets/img/portfolio/hrm.png',
-      altText: 'HRM',
-      projectName: 'HRM-System',
-      status: 'in-progress',
-      languages: 'Angular | TypeScript | Supabase',
-      description: 'DABUBBLE_DESCRIPTION',
-      liveTestLink: 'https://hrm.patrick-nigrin.dev',
-      githubLink: 'https://github.com/Patrick0815300/HRM'
-    },
-    {
       imageSrc: '../../../assets/img/portfolio/dabubble.png',
       altText: 'DABubble',
       projectName: 'DA Bubble',

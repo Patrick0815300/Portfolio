@@ -9,11 +9,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollService } from '../../shared/services/scroll.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, MatButtonModule, CommonModule, ScrollAnimationDirective, TranslateModule],
+  imports: [FormsModule, ReactiveFormsModule, MatCheckboxModule, JsonPipe, MatButtonModule, CommonModule, ScrollAnimationDirective, TranslateModule, RouterModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
   animations: [

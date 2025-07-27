@@ -40,7 +40,7 @@
                 <div *ngIf="!message.valid && message.touched" class="required-log">{{ 'CONTACT_MESSAGE_ERROR' | translate }}</div>
             
                 <mat-checkbox appScrollAnimation [delay]="200" #checked="ngModel" class="checkbox" color="primary" [(ngModel)]="contactData.isChecked" name="privacy">
-                    <span>{{ 'CONTACT_PRIVACY' | translate }} <a href="privacy">{{ 'CONTACT_PRIVACY_LINK' | translate }}</a></span>
+                    <span>{{ 'CONTACT_PRIVACY' | translate }} <a [routerLink]="['privacy']">{{ 'CONTACT_PRIVACY_LINK' | translate }}</a></span>
                 </mat-checkbox>
                 @if (!checked) {
                     <span class="required-log">{{ 'CONTACT_PRIVACY_ERROR' | translate }}</span>

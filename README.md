@@ -1,27 +1,52 @@
-# Portfolio
+# Patrick Nigrin – Frontend Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Willkommen in meinem Portfolio!  
+Hier zeige ich meine Arbeit und meinen Werdegang als Frontend Webentwickler mit Fokus auf Angular und React.  
+Standort: Jena, Thüringen, Deutschland
 
-## Development server
+## 🚀 Projekt-Überblick
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Diese Website repräsentiert meine Skills, Projekte und meine Leidenschaft für moderne Frontend-Entwicklung. Gestaltet, um potenziellen Auftraggebern und Teams einen schnellen Eindruck über meine Fachkompetenz, meinen Code-Stil sowie ausgewählte Arbeiten aus echten Projekten zu geben.
 
-## Code scaffolding
+**Live-Demo:**  
+[patrick-nigrin.dev](https://patrick-nigrin.dev)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Verwendete Technologien
 
-## Build
+- Angular
+- React
+- TypeScript
+- JavaScript (ES6+)
+- HTML5 & CSS3/SCSS
+- Responsive Webdesign
+- Git, GitHub
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 💡 Features
 
-## Running unit tests
+- Übersichtliches, responsives Layout
+- Interaktive Projektgalerie
+- Individuelle Projektseiten mit Beschreibung, Tech-Stack und Ergebnis
+- Kontaktformulare und Social-Links
+- In Deutsch und optional/oder Englisch verfügbar
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🏆 Ausgewählte Projekte
 
-## Running end-to-end tests
+- **Business-Webapplikationen** – Entwicklung von Enterprise-Solutions mit Angular und TypeScript
+- **Task Management App** – Multiuser-Organisations-Tool (Angular, Firebase)
+- **Jump’n’Run Browser Game** – Objektorientierte Spieleentwicklung
+- **Chat-Messenger-App** – Echtzeit-Kommunikation mit modernen UI-Patterns
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🤝 Kontakt
 
-## Further help
+| Plattform   | Link                    |
+| ----------- | ----------------------- |
+| Website     | www.patrick-nigrin.dev   |
+| LinkedIn    | www.linkedin.com/in/patrick-nigrin       |
+| Malt        | www.malt.de/profile/patricknigrin |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📖 Lizenz
+
+Dieses Projekt steht unter der MIT-Lizenz.
+
+**Hinweis:**  
+Die Inhalte und dargestellten Projekte sind Eigentum von Patrick Nigrin und dürfen ohne Genehmigung nicht kommerziell weiterverwendet werden.

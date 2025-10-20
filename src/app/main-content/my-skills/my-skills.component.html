@@ -1,8 +1,8 @@
-<section>
+<section role="region" aria-label="My Skills Section">
   <div appScrollAnimation [delay]="100" class="mobile">
     <div>
       <h1>{{ 'MY_SKILLS_TITLE' | translate }}</h1>
-      <div class="line"></div>
+      <div class="line" role="presentation" aria-hidden="true"></div>
     </div>
     <span>{{ 'MY_SKILLS_DESCRIPTION' | translate }}</span>
   </div>
@@ -13,7 +13,7 @@
         <img [src]="skill.src" [alt]="skill.alt">
       </ng-container>
       <ng-container *ngIf="skill.isSvg">
-        <svg class="learning-icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="learning-icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
           <g clip-path="url(#clip0_105153_4937)">
             <path d="M49.8288 25.245L30.6154 36.1892C30.2695 36.3926 29.8424 36.3926 29.4864 36.1892L10.2729 25.245C9.52027 24.8178 9.52027 23.7295 10.2729 23.2921L29.4864 12.3479C29.8322 12.1445 30.2594 12.1445 30.6154 12.3479L49.8288 23.2921C50.5815 23.7193 50.5815 24.8076 49.8288 25.245Z" fill="currentColor"/>
             <path d="M46.5028 28.927V37.9489C46.5028 38.3557 46.2892 38.7219 45.9332 38.9253L30.6154 47.6522C30.2696 47.8556 29.8424 47.8556 29.4864 47.6522L14.1685 38.9253C13.8125 38.7219 13.5989 38.3557 13.5989 37.9489V28.927L22.0919 33.7583L29.4864 37.9794C29.8322 38.1828 30.2594 38.1828 30.6154 37.9794L38.0099 33.7583L46.5028 28.927Z" fill="currentColor"/>
@@ -28,7 +28,7 @@
         </svg>
       </ng-container>
       <span>{{ skill.name }}</span>
-      <img *ngIf="skill.isSvg" class="speechbubble" src="../../../assets/img/skills/speachbubble.png" alt="speechbubble">
+      <img *ngIf="skill.isSvg" class="speechbubble" src="../../../assets/img/skills/speachbubble.png" alt="" role="presentation">
     </div>
   </div>
 
@@ -40,6 +40,6 @@
     <span class="experience">{{ 'MY_SKILLS_EXPERIENCE' | translate }}</span>
     <span class="big-font">{{ 'MY_SKILLS_BIG_FONT' | translate }}</span>
     <span>{{ 'MY_SKILLS_CONTACT_PROMPT' | translate }}</span>
-    <a (click)="onSectionClick('contact')"><button>{{ 'CONTACT_BUTTON' | translate }}</button></a>
+    <button type="button" (click)="onSectionClick('contact')">{{ 'CONTACT_BUTTON' | translate }}</button>
   </div>
 </section>

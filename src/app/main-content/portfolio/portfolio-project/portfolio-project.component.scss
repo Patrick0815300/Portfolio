@@ -103,7 +103,7 @@ a {
         gap: 86px;
         margin-top: 35px;
 
-        button {
+        a {
             font-size: 23px;
             line-height: 27.6px;
             background-color: $primary2-color;
@@ -118,7 +118,7 @@ a {
             }
         }
 
-        .btn-git button {
+        .btn-git {
             background-color: transparent;
             border: 1px solid $primary1-color;
         }

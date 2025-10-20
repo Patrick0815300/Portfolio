@@ -10,14 +10,13 @@
             'status-offline': status === 'offline',
             'status-in-progress': status === 'in-progress'
             }"></div>
-
         </div>
         
         <span class="languages">{{ languages }}</span>
         <span>{{ description | translate }}</span>
         <div class="buttons">
-            <a [href]="liveTestLink" target="_blank"><button>Live test</button></a>
-            <a class="btn-git" [href]="githubLink" target="_blank"><button>Github</button></a>
+            <a [href]="liveTestLink" target="_blank">Live test</a>
+            <a class="btn-git" [href]="githubLink" target="_blank">Github</a>
         </div>
     </div>
     <div *ngIf="reverse" class="image">

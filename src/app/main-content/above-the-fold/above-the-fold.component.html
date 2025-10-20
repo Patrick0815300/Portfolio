@@ -14,7 +14,6 @@
             (load)="onImageLoad(i)" 
             (error)="onImageError(i)"
             [hidden]="!isImageLoaded[i]"
-            alt="Shadow Background"
             role="presentation"
             >
         </div>
@@ -31,19 +30,19 @@
         </div>
     </div>
     
-    <div class="social-container" aria-label="Social Media Links">
+    <nav class="social-container" aria-label="Social Media Links">
         <div class="media animation">
             <div class="line"></div>
             <a href="https://github.com/Patrick0815300" target="_blank"><img src="../../assets/img/socialbuttons/github.png" alt="zu meinem Github Profil"></a>
             <a href="mailto:mail@patrick-nigrin.dev"><img src="../../../assets/img/socialbuttons/email.png"alt="Mail versenden an Patrick Nigrin"></a>
             <a href="https://www.linkedin.com/in/patrick-nigrin-686b98285/" target="_blank"><img src="../../../assets/img/socialbuttons/linkedin.png" alt="zu meinem Linkedin Profil"></a>
-            <a class="mail" href="mailto:mail@patrick-nigrin.dev" aria-label="mail versenden an Patrick Nigrin">mail&#64;patrick-nigrin.dev</a>
+            <a class="mail" href="mailto:mail@patrick-nigrin.dev">mail&#64;patrick-nigrin.dev</a>
         </div>
         <div class="scroll-down">
             <span>{{'Scroll down'}}</span>
             <img src="../../../assets/img/general/arrowup_white.png" alt="Preil nach unten scrollen">
         </div>        
-    </div>
+    </nav>
 
 </section>
 <img class="hero-background" src="../../../assets/img/background/28. hero_background.png" role="presentation">

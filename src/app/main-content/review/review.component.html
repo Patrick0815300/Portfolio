@@ -1,4 +1,4 @@
-<section>
+<section role="region" aria-label="Review-Section">
     <div class="headline">
         <div></div>
         <h1>Reviews</h1>
@@ -26,10 +26,10 @@
         <mat-icon class="touch-icon">touch_app</mat-icon>
       </div>
       <button class="btn-left" (click)="prev()">
-        <mat-icon>chevron_left</mat-icon>
+        <mat-icon aria-label="Reviews nach links navigieren">chevron_left</mat-icon>
       </button>
       <button class="btn-right" (click)="next()">
-        <mat-icon>chevron_right</mat-icon>
+        <mat-icon aria-label="Reviews nach rechts navigieren">chevron_right</mat-icon>
       </button>
     </div>
     <div class="counter-points" >
@@ -38,7 +38,7 @@
             *ngFor="let review of reviews; let i = index" 
             [ngClass]="{ 'active': i === currentIndex }" 
             (click)="goToIndex(i)"
-            ><span></span>
+            >
         </div>
     </div>
   </section>

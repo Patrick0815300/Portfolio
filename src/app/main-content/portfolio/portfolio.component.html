@@ -3,9 +3,9 @@
         <img class="shadow" src="../../../assets/img/background/31. green_shadow_skills_portfolio.png" alt="green-shadow">
     </div>
     <div appScrollAnimation [delay]="100" class="headline">
-        <div class="short-line"></div>
+        <div class="short-line" role="presentation"></div>
         <h1>Portfolio</h1>
-        <div class="long-line"></div>
+        <div class="long-line" role="presentation"></div>
     </div>
     <span appScrollAnimation [delay]="150">{{ 'PORTFOLIO_INTRO' | translate }}</span>
     <div *ngFor="let project of projects; let i = index" appScrollAnimation [delay]="200 + i * 100" class="projects">

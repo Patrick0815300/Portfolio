@@ -1,4 +1,4 @@
-<section>
+<section role="region" aria-label="Hero-Section">
     <div class="container" >
         <div class="photo-container" *ngFor="let image of images; let i = index">
             <div *ngIf="!isImageLoaded[i]" class="loader">Lädt...</div>
@@ -7,12 +7,15 @@
             (load)="onImageLoad(i)" 
             (error)="onImageError(i)"
             [hidden]="!isImageLoaded[i]"
+            [alt]="'Portfolio Bild ' + (i + 1)"
             >
             <img class="shadow" 
             [src]="image.shadow"
             (load)="onImageLoad(i)" 
             (error)="onImageError(i)"
             [hidden]="!isImageLoaded[i]"
+            alt="Shadow Background"
+            role="presentation"
             >
         </div>
         
@@ -24,26 +27,25 @@
                     <h2>{{ 'FRONTEND_DEV' | translate }}</h2>
                 </div>
             </div>
-            <a (click)="onSectionClick('contact')"><button>{{ 'LETS_TALK' | translate }}</button></a>
-            
+            <button (click)="onSectionClick('contact')">{{ 'LETS_TALK' | translate }}</button>
         </div>
     </div>
     
-    <div class="social-container">
+    <div class="social-container" aria-label="Social Media Links">
         <div class="media animation">
             <div class="line"></div>
-            <a href="https://github.com/Patrick0815300" target="_blank"><img src="../../assets/img/socialbuttons/github.png" alt=""></a>
-            <a href="mailto:mail@patrick-nigrin.dev"><img src="../../../assets/img/socialbuttons/email.png"alt=""></a>
-            <a href="https://www.linkedin.com/in/patrick-nigrin-686b98285/" target="_blank"><img src="../../../assets/img/socialbuttons/linkedin.png" alt=""></a>
-            <a class="mail" href="mailto:mail@patrick-nigrin.dev">mail&#64;patrick-nigrin.dev</a>
+            <a href="https://github.com/Patrick0815300" target="_blank"><img src="../../assets/img/socialbuttons/github.png" alt="zu meinem Github Profil"></a>
+            <a href="mailto:mail@patrick-nigrin.dev"><img src="../../../assets/img/socialbuttons/email.png"alt="Mail versenden an Patrick Nigrin"></a>
+            <a href="https://www.linkedin.com/in/patrick-nigrin-686b98285/" target="_blank"><img src="../../../assets/img/socialbuttons/linkedin.png" alt="zu meinem Linkedin Profil"></a>
+            <a class="mail" href="mailto:mail@patrick-nigrin.dev" aria-label="mail versenden an Patrick Nigrin">mail&#64;patrick-nigrin.dev</a>
         </div>
         <div class="scroll-down">
             <span>{{'Scroll down'}}</span>
-            <img src="../../../assets/img/general/arrowup_white.png" alt="arrowup_white">
+            <img src="../../../assets/img/general/arrowup_white.png" alt="Preil nach unten scrollen">
         </div>        
     </div>
 
 </section>
-<img class="hero-background" src="../../../assets/img/background/28. hero_background.png" alt="Hero-Background">
+<img class="hero-background" src="../../../assets/img/background/28. hero_background.png" role="presentation">
 
 

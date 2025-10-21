@@ -1,9 +1,9 @@
-<section>
+<header>
     <div class="max-width">
       <a [routerLink]="['/']" fragment="abovethefold">
         <img src="../../../assets/img/general/logo.png" alt="Logo">
     </a>
-    <div class="links">
+    <nav class="links">
       <a [routerLink]="['/']" fragment="aboutme" [class.active]="currentSection === 'aboutme'">{{ 'HEADER_ABOUT_ME' | translate }}</a>
       <a [routerLink]="['/']" fragment="skills" [class.active]="currentSection === 'skills'">{{ 'HEADER_SKILLS' | translate }}</a>
       <a [routerLink]="['/']" fragment="portfolio" [class.active]="currentSection === 'portfolio'">{{ 'HEADER_PORTFOLIO' | translate }}</a>
@@ -12,7 +12,7 @@
         <span>|</span>
         <span class="lang" [class.active]="isActiveLang('en')" (click)="switchLanguage('en')">en</span>
       </div>
-    </div>
+    </nav>
     
     <div class="burger-menu" [ngClass]="{ 'active': menuOpen }" (click)="toggleMenu()">
         <div class="first lane"></div>
@@ -21,7 +21,7 @@
     </div>
   </div>
     
-</section>
+</header>
 <div class="overlay" [ngClass]="{'active': menuOpen}">
   <div class="container">
     <a [routerLink]="['/']" fragment="aboutme" (click)="toggleMenuWithDelay('aboutme')">{{ 'HEADER_ABOUT_ME' | translate }}</a>

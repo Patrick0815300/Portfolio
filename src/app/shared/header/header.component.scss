@@ -5,7 +5,7 @@ a {
     cursor: pointer;
 }
 
-section {
+header {
     position: fixed;
     left: 0;
     right: 0;
@@ -33,7 +33,7 @@ section {
         margin-left: 100px;
     }
 
-    div {
+    nav {
         display: flex;
         gap: 29px;
     }

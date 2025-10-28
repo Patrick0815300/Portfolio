@@ -213,7 +213,7 @@ header {
 // ---------------------------- Media ----------------------------
 
 @media (max-width: 1024px) {
-    section {
+    header {
         img {
             margin-left: 50px;
         }
@@ -227,7 +227,7 @@ header {
 }
 
 @media (max-width: 768px) {
-    section {
+    header {
         .burger-menu {
             display: flex;
         }

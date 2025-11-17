@@ -28,10 +28,10 @@ export class PortfolioComponent {
       altText: 'Join',
       projectName: 'Join',
       status: 'online',
-      languages: 'JavaScript | HTML | CSS | Firebase',
+      languages: 'React | Typescript | Supabase',
       description: 'JOIN_DESCRIPTION',
       liveTestLink: 'https://join.patrick-nigrin.dev',
-      githubLink: 'https://github.com/Patrick0815300/JOIN'
+      githubLink: 'https://github.com/Patrick0815300/Join-React'
     },
     {
       imageSrc: '../../../assets/img/portfolio/el_pollo_loco.png',

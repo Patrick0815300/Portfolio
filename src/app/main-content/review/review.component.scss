@@ -7,7 +7,7 @@ section {
     margin-bottom: 64px;
 }
 
-h1 {
+h2 {
     font-size: 90px;
     font-weight: 700;
     line-height: 108px;
@@ -161,7 +161,7 @@ button {
     width: 100%;
     justify-content: flex-end;
 
-    h1 {
+    h2 {
         margin-inline: 32px;
     }
 
@@ -211,7 +211,7 @@ button {
 
 
 @media (max-width: 768px) {
-    h1 {
+    h2 {
         font-size: 45px;
     }
 }

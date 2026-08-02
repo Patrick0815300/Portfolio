@@ -6,6 +6,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SeoService } from './shared/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -28,15 +29,17 @@ export class AppComponent {
   currentLang = 'de';
   currentSection: string = '';
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, private seo: SeoService) {
     this.translate.setDefaultLang('de');
     this.translate.use('de');
     this.translate.setDefaultLang('de');
+    this.seo.init();
   }
 
   switchLanguage(lang: string) {
     this.currentLang = lang;
     this.translate.use(lang);
+    document.documentElement.lang = lang;
   }
 
   @HostListener('window:scroll', [])

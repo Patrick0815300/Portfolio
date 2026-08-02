@@ -14,7 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent {
   projects = [
     {
-      imageSrc: '../../../assets/img/portfolio/dabubble.png',
+      imageSrc: '../../../assets/img/portfolio/dabubble.webp',
       altText: 'DABubble',
       projectName: 'DA Bubble',
       status: 'online',
@@ -24,7 +24,7 @@ export class PortfolioComponent {
       githubLink: 'https://github.com/Patrick0815300/DABubble'
     },
     {
-      imageSrc: '../../../assets/img/portfolio/join.png',
+      imageSrc: '../../../assets/img/portfolio/join.webp',
       altText: 'Join',
       projectName: 'Join',
       status: 'online',
@@ -34,7 +34,7 @@ export class PortfolioComponent {
       githubLink: 'https://github.com/Patrick0815300/Join-React'
     },
     {
-      imageSrc: '../../../assets/img/portfolio/el_pollo_loco.png',
+      imageSrc: '../../../assets/img/portfolio/el_pollo_loco.webp',
       altText: 'el_pollo_loco',
       projectName: 'El Pollo Loco',
       status: 'online',

@@ -27,6 +27,15 @@ body {
     overflow-x: hidden !important;
 }
 
+/* material-icons-regular - lokal gehostet statt ueber fonts.googleapis.com */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('./assets/fonts/material-icons-regular.woff2') format('woff2');
+}
+
 mat-icon {
     font-family: 'Material Icons' !important;
     display: flex;

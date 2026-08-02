@@ -1,7 +1,7 @@
 <section role="region" aria-label="My Skills Section">
   <div appScrollAnimation [delay]="100" class="mobile">
     <div>
-      <h1>{{ 'MY_SKILLS_TITLE' | translate }}</h1>
+      <h2>{{ 'MY_SKILLS_TITLE' | translate }}</h2>
       <div class="line" role="presentation" aria-hidden="true"></div>
     </div>
     <span>{{ 'MY_SKILLS_DESCRIPTION' | translate }}</span>
@@ -10,7 +10,7 @@
   <div class="icon-container">
     <div *ngFor="let skill of skills" class="icon-item" appScrollAnimation [delay]="250" [ngClass]="{ 'learning': skill.isSvg }">
       <ng-container *ngIf="!skill.isSvg">
-        <img [src]="skill.src" [alt]="skill.alt">
+        <img loading="lazy" [src]="skill.src" [alt]="skill.alt">
       </ng-container>
       <ng-container *ngIf="skill.isSvg">
         <svg class="learning-icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
@@ -28,13 +28,13 @@
         </svg>
       </ng-container>
       <span>{{ skill.name }}</span>
-      <img *ngIf="skill.isSvg" class="speechbubble" src="../../../assets/img/skills/speachbubble.png" alt="" role="presentation">
+      <img *ngIf="skill.isSvg" class="speechbubble" loading="lazy" src="../../../assets/img/skills/speachbubble.webp" alt="" role="presentation">
     </div>
   </div>
 
   <div appScrollAnimation [delay]="100" class="skill-container">
     <div>
-      <h1>{{ 'MY_SKILLS_TITLE' | translate }}</h1>
+      <h2>{{ 'MY_SKILLS_TITLE' | translate }}</h2>
       <div class="line"></div>
     </div>
     <span class="experience">{{ 'MY_SKILLS_EXPERIENCE' | translate }}</span>

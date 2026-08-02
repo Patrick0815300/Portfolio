@@ -7,7 +7,7 @@ section {
     max-width: 1440px;
     margin-top: 180px;
 
-    h1 {
+    h2 {
         font-size: 90px;
         font-weight: 900;
         line-height: 108px;
@@ -24,7 +24,7 @@ section {
     margin-left: 100px;
     width: 500px;
 
-    h1 {
+    h2 {
         margin-bottom: 40px;
     }
 
@@ -96,7 +96,7 @@ section {
         flex-direction: column;
         align-items: center;
 
-        h1 {
+        h2 {
             font-size: 72px;
         }
     }
@@ -120,7 +120,7 @@ section {
 
 @media (max-width: 680px) {
     .about-me-container {
-        h1 {
+        h2 {
             font-size: 45px;
             line-height: 54px;
             margin-bottom: 32px;

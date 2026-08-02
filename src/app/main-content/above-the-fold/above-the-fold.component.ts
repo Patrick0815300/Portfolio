@@ -16,8 +16,8 @@ export class AboveTheFoldComponent {
   isImageLoaded: boolean[] = [];
   images = [
     {
-      expample1: '../../../assets/img/general/example1.png',
-      shadow: '../../../assets/img/background/29. photo_shadows.png',
+      expample1: '../../../assets/img/general/example1.webp',
+      shadow: '../../../assets/img/background/29. photo_shadows.webp',
     },
   ];
   constructor(private scrollService: ScrollService) {

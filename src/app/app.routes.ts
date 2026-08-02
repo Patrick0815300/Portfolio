@@ -10,9 +10,33 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 
 export const routes: Routes = [
-    { path: '', component: MainContentComponent },
-    { path: 'privacy', component: PrivacyPolicyComponent },
-    { path: 'legal', component: LegalNoticeComponent }
+    {
+        path: '',
+        component: MainContentComponent,
+        data: {
+            title: 'Patrick Nigrin IT-Projektleitung',
+            description: 'IT-Projektleitung und Projektmanagement für Softwareprojekte, Websites und Webanwendungen – mit technischem Hintergrund als Frontend-Entwickler. Anforderungsanalyse, agile Projektsteuerung und technische Beratung aus Jena.',
+            canonical: 'https://patrick-nigrin.dev/'
+        }
+    },
+    {
+        path: 'privacy',
+        component: PrivacyPolicyComponent,
+        data: {
+            title: 'Datenschutzerklärung | Patrick Nigrin',
+            description: 'Datenschutzerklärung von Patrick Nigrin: Informationen zur Verarbeitung personenbezogener Daten beim Besuch dieser Website.',
+            canonical: 'https://patrick-nigrin.dev/privacy'
+        }
+    },
+    {
+        path: 'legal',
+        component: LegalNoticeComponent,
+        data: {
+            title: 'Impressum | Patrick Nigrin',
+            description: 'Impressum und Anbieterkennzeichnung von Patrick Nigrin gemäß § 5 TMG.',
+            canonical: 'https://patrick-nigrin.dev/legal'
+        }
+    }
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 <div class="project-container" [ngClass]="{'reverse': reverse}">
     <div *ngIf="!reverse" class="image">
-        <img [src]="imageSrc" [alt]="altText">
+        <img loading="lazy" [src]="imageSrc" [alt]="altText">
     </div>
     <div class="description">
         <div class="header-description" [ngClass]="{ 'reverse-row': reverse }">
@@ -15,12 +15,12 @@
         <span class="languages">{{ languages }}</span>
         <span>{{ description | translate }}</span>
         <div class="buttons">
-            <a [href]="liveTestLink" target="_blank">Live test</a>
-            <a class="btn-git" [href]="githubLink" target="_blank">Github</a>
+            <a [href]="liveTestLink" target="_blank" rel="noopener noreferrer">Live test</a>
+            <a class="btn-git" [href]="githubLink" target="_blank" rel="noopener noreferrer">Github</a>
         </div>
     </div>
     <div *ngIf="reverse" class="image">
-        <img [src]="imageSrc" [alt]="altText">
+        <img loading="lazy" [src]="imageSrc" [alt]="altText">
     </div>
 </div>
 

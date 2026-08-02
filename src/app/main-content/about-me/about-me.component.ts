@@ -14,8 +14,8 @@ export class AboutMeComponent {
   @Input() visibility: string = 'hidden';
   images = [
     {
-      example2: '../../../assets/img/general/example2.png',
-      shadow: '../../../assets/img/background/30. purple_shadow_about_me.png',
+      example2: '../../../assets/img/general/example2.webp',
+      shadow: '../../../assets/img/background/30. purple_shadow_about_me.webp',
     }
   ]
 

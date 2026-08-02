@@ -1,22 +1,22 @@
 <section *ngFor="let image of images; let i = index" role="region" aria-label="Ueber mich Section">
     <div class="about-me-container">
-         <h1 appScrollAnimation [delay]="100">{{ 'ABOUT_ME_TITLE' | translate }}</h1>
+         <h2 appScrollAnimation [delay]="100">{{ 'ABOUT_ME_TITLE' | translate }}</h2>
          <span appScrollAnimation [delay]="150">{{ 'ABOUT_ME_INTRO' | translate }}</span>
          <div appScrollAnimation [delay]="150" class="margin-top">
-             <img src="../../../assets/img/aboutme/location_green.png" alt="location_green">
+             <img loading="lazy" src="../../../assets/img/aboutme/location_green.webp" alt="location_green">
              <span>{{ 'ABOUT_ME_LOCATION' | translate }}</span>
          </div>
          <div appScrollAnimation [delay]="200">
-             <img src="../../../assets/img/aboutme/bulb_green.png" alt="bulb_green">
+             <img loading="lazy" src="../../../assets/img/aboutme/bulb_green.webp" alt="bulb_green">
              <span>{{ 'ABOUT_ME_MINDSET' | translate }}</span>
          </div>
          <div appScrollAnimation [delay]="250">
-             <img src="../../../assets/img/aboutme/puzzle_green.png" alt="puzzle_green">
+             <img loading="lazy" src="../../../assets/img/aboutme/puzzle_green.webp" alt="puzzle_green">
              <span>{{ 'ABOUT_ME_PROFESSION' | translate }}</span>
          </div>
      </div>
      <div class="photo-container">
-         <img appScrollAnimation [delay]="100"  class="photo" 
+         <img appScrollAnimation [delay]="100"  class="photo" loading="lazy"
          [src]="image.example2" alt="Patrick2"
          (load)="onImageLoad(i)" 
         (error)="onImageError(i)"
@@ -25,5 +25,5 @@
      </div>
 </section>
 <div class="overflow-wrapper" *ngFor="let image of images">
-    <img class="shadow" [src]="image.shadow" alt="purple_shadow_about_me">
+    <img class="shadow" loading="lazy" [src]="image.shadow" alt="purple_shadow_about_me">
 </div>

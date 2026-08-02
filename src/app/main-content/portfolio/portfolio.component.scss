@@ -1,6 +1,6 @@
 @import '../../../styles.scss';
 
-h1 {
+h2 {
     font-size: 90px;
     font-weight: 700;
     line-height: 108px;
@@ -72,13 +72,13 @@ section {
 }
 
 @media (max-width: 768px) {
-    h1 {
+    h2 {
         font-size: 72px;
     }
 }
 
 @media (max-width: 680px) {
-    h1 {
+    h2 {
         font-size: 45px;
         line-height: 54px;
     }
